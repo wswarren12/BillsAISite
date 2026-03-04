@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { resend } from "@/lib/resend";
+import { getResend } from "@/lib/resend";
 import { contactFormSchema } from "@/lib/validators";
 import { ContactNotificationHtml } from "@/emails/ContactNotification";
 
@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
     const contactEmail = process.env.CONTACT_EMAIL || "bill@billsclub.ai";
 
-    await resend.emails.send({
+    await getResend().emails.send({
       from: "Portfolio Contact <noreply@billsclub.ai>",
       to: contactEmail,
       replyTo: email,
