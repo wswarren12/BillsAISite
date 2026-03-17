@@ -16,14 +16,16 @@ const statusColors: Record<Project["status"], string> = {
 };
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
-  return (
+  const hasLink = project.url && project.url !== "#";
+
+  const card = (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -4 }}
-      className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-lg"
+      className={`group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-lg${hasLink ? " cursor-pointer" : ""}`}
     >
       <div className="mb-4 flex items-start justify-between">
         <span className="text-4xl">{project.emoji}</span>
@@ -56,4 +58,14 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       </div>
     </motion.div>
   );
+
+  if (hasLink) {
+    return (
+      <a href={project.url} target="_blank" rel="noopener noreferrer">
+        {card}
+      </a>
+    );
+  }
+
+  return card;
 }

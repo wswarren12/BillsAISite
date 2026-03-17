@@ -17,7 +17,7 @@ export const projects: Project[] = [
       "A gamified chore management app for families that turns household tasks into spinning-wheel adventures. Built to solve the age-old problem of getting kids to help around the house.",
     status: "Live",
     tags: ["React Native", "Gamification", "Family Tech"],
-    url: "#",
+    url: "https://gachas.billsai.club/",
   },
   {
     name: "NewsBreef",
