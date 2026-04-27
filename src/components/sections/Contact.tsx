@@ -196,7 +196,7 @@ export default function Contact() {
               key={l.label}
               href={l.href}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="no-underline px-3.5 py-2 rounded-full transition-all hover:-translate-y-0.5"
               style={{
                 border: "1px solid var(--line-2)",

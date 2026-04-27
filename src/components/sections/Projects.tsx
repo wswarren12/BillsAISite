@@ -158,7 +158,7 @@ function ProjectCard({ p }: { p: Project }) {
       ref={ref}
       href={p.url || "#"}
       target={p.url && p.url !== "#" ? "_blank" : undefined}
-      rel="noopener"
+      rel="noopener noreferrer"
       className="relative flex flex-col no-underline group"
       style={{
         background: "var(--ink-900)",
