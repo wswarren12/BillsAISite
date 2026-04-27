@@ -24,13 +24,15 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: true });
     }
 
-    const contactEmail = process.env.CONTACT_EMAIL || "bill@billsclub.ai";
+    const contactEmail = process.env.CONTACT_EMAIL || "bill@billsai.club";
+    const fromAddress =
+      process.env.FROM_EMAIL || "Portfolio Contact <onboarding@resend.dev>";
 
     await getResend().emails.send({
-      from: "Portfolio Contact <noreply@billsclub.ai>",
+      from: fromAddress,
       to: contactEmail,
       replyTo: email,
-      subject: `New message from ${name} via billsclub.ai`,
+      subject: `New message from ${name} via billsai.club`,
       html: ContactNotificationHtml({ name, email, message }),
     });
 
