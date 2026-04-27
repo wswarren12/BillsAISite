@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -12,8 +12,14 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  subsets: ["latin"],
+  axes: ["opsz"],
+});
+
 export const metadata: Metadata = {
-  title: "Bill Warren | Senior Product Leader — AI & Platform Strategy",
+  title: "Bill Warren — Product Leader",
   description:
     "Product leader with 7+ years of experience building and scaling AI-powered platforms, financial tools, and community engagement systems. Head of Product at Game7/Summon, former corporate attorney.",
   keywords: [
@@ -25,7 +31,7 @@ export const metadata: Metadata = {
     "Bill Warren",
   ],
   openGraph: {
-    title: "Bill Warren | Senior Product Leader",
+    title: "Bill Warren — Product Leader",
     description:
       "Product leader with 7+ years building AI-powered platforms, financial tools, and community engagement systems.",
     type: "website",
@@ -33,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bill Warren | Senior Product Leader",
+    title: "Bill Warren — Product Leader",
     description:
       "Product leader with 7+ years building AI-powered platforms, financial tools, and community engagement systems.",
   },
@@ -47,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-white text-slate-900`}
+        className={`${inter.variable} ${jetbrainsMono.variable} ${bricolage.variable} antialiased`}
       >
         {children}
       </body>

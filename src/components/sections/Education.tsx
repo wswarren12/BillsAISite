@@ -1,84 +1,161 @@
 "use client";
 
-import AnimatedSection from "@/components/ui/AnimatedSection";
-import SectionHeading from "@/components/ui/SectionHeading";
 import { education, boardRoles } from "@/data/education";
-import { FiBookOpen, FiAward } from "react-icons/fi";
 
 export default function Education() {
   return (
-    <section id="education" className="py-12 md:py-16">
-      <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading
-          title="Education & Leadership"
-          subtitle="Academic foundation and community involvement"
-        />
+    <section
+      id="education"
+      style={{ background: "var(--paper)", color: "var(--ink-on-paper)" }}
+    >
+      <div className="mx-auto max-w-[1280px] px-7 py-[120px]">
+        {/* Head */}
+        <div
+          className="grid gap-12 mb-16 items-start"
+          style={{ gridTemplateColumns: "280px 1fr" }}
+        >
+          <div>
+            <div
+              className="font-mono text-[11px] tracking-[0.18em] uppercase flex items-center gap-2.5"
+              style={{ color: "var(--indigo-deep)" }}
+            >
+              <span
+                className="inline-block w-[18px] h-px flex-shrink-0"
+                style={{ background: "var(--indigo-deep)" }}
+              />
+              05 / Credentials
+            </div>
+          </div>
+          <div>
+            <h2
+              style={{
+                fontSize: "clamp(36px, 5vw, 64px)",
+                fontWeight: 500,
+                letterSpacing: "-0.03em",
+                lineHeight: 1.02,
+                margin: 0,
+                color: "var(--ink-on-paper)",
+              }}
+            >
+              Education &amp;{" "}
+              <span
+                style={{
+                  fontFamily: "var(--font-bricolage), sans-serif",
+                  fontWeight: 600,
+                  color: "var(--indigo-deep)",
+                }}
+              >
+                service
+              </span>
+              .
+            </h2>
+          </div>
+        </div>
 
-        <div className="grid gap-12 lg:grid-cols-2">
+        <div className="grid gap-15" style={{ gridTemplateColumns: "1fr 1fr" }}>
           {/* Education */}
-          <AnimatedSection direction="left">
-            <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div className="mb-6 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600">
-                  <FiBookOpen size={20} />
+          <div>
+            <h3
+              className="font-mono text-[11px] tracking-[0.16em] uppercase m-0 mb-6 pb-3.5"
+              style={{
+                color: "var(--muted-on-paper)",
+                borderBottom: "1px solid rgba(0,0,0,0.1)",
+              }}
+            >
+              Education
+            </h3>
+            {education.map((e, i) => (
+              <div
+                key={i}
+                className="py-5"
+                style={{
+                  borderBottom:
+                    i < education.length - 1
+                      ? "1px dashed rgba(0,0,0,0.12)"
+                      : undefined,
+                }}
+              >
+                <div
+                  className="text-xl font-medium"
+                  style={{ letterSpacing: "-0.01em" }}
+                >
+                  {e.institution}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">Education</h3>
-              </div>
-
-              <div className="space-y-6">
-                {education.map((edu) => (
-                  <div key={edu.institution}>
-                    <h4 className="font-bold text-slate-900">
-                      {edu.institution}
-                    </h4>
-                    <p className="text-sm font-semibold text-indigo-600">
-                      {edu.degree}
-                    </p>
-                    {edu.details && (
-                      <p className="mt-1 text-sm text-slate-500">
-                        {edu.details}
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </AnimatedSection>
-
-          {/* Board Roles */}
-          <AnimatedSection direction="right">
-            <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div className="mb-6 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-50 text-amber-600">
-                  <FiAward size={20} />
+                <div
+                  className="mt-1"
+                  style={{
+                    fontFamily: "var(--font-bricolage), sans-serif",
+                    fontSize: 17,
+                    color: "var(--indigo-deep)",
+                  }}
+                >
+                  {e.degree}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">
-                  Board & Community
-                </h3>
-              </div>
-
-              <div className="space-y-6">
-                {boardRoles.map((role) => (
-                  <div key={role.organization}>
-                    <div className="flex items-baseline justify-between gap-2">
-                      <h4 className="font-bold text-slate-900">
-                        {role.organization}
-                      </h4>
-                      <span className="shrink-0 text-xs text-slate-400">
-                        {role.period}
-                      </span>
-                    </div>
-                    <p className="text-sm font-semibold text-indigo-600">
-                      {role.role}
-                    </p>
-                    <p className="mt-1 text-sm text-slate-500">
-                      {role.description}
-                    </p>
+                {e.details && (
+                  <div
+                    className="mt-2 text-sm leading-snug"
+                    style={{ color: "var(--muted-on-paper)" }}
+                  >
+                    {e.details}
                   </div>
-                ))}
+                )}
               </div>
-            </div>
-          </AnimatedSection>
+            ))}
+          </div>
+
+          {/* Board */}
+          <div>
+            <h3
+              className="font-mono text-[11px] tracking-[0.16em] uppercase m-0 mb-6 pb-3.5"
+              style={{
+                color: "var(--muted-on-paper)",
+                borderBottom: "1px solid rgba(0,0,0,0.1)",
+              }}
+            >
+              Board &amp; Advisory
+            </h3>
+            {boardRoles.map((b, i) => (
+              <div
+                key={i}
+                className="py-5"
+                style={{
+                  borderBottom:
+                    i < boardRoles.length - 1
+                      ? "1px dashed rgba(0,0,0,0.12)"
+                      : undefined,
+                }}
+              >
+                <div
+                  className="text-xl font-medium"
+                  style={{ letterSpacing: "-0.01em" }}
+                >
+                  {b.organization}
+                </div>
+                <div
+                  className="mt-1"
+                  style={{
+                    fontFamily: "var(--font-bricolage), sans-serif",
+                    fontSize: 17,
+                    color: "var(--indigo-deep)",
+                  }}
+                >
+                  {b.role}
+                </div>
+                <div
+                  className="mt-1.5 font-mono text-[11px]"
+                  style={{ color: "var(--muted-on-paper)" }}
+                >
+                  {b.period}
+                </div>
+                <div
+                  className="mt-2 text-sm leading-snug"
+                  style={{ color: "var(--muted-on-paper)" }}
+                >
+                  {b.description}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

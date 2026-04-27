@@ -33,6 +33,31 @@
   --color-slate-950: #020617;
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
+  --font-display: var(--font-bricolage);
+}
+
+:root {
+  --ink-950: #141623;
+  --ink-900: #1a1d2c;
+  --ink-850: #1f2233;
+  --ink-800: #262a3e;
+  --ink-700: #303553;
+  --ink-600: #3a4065;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-2: rgba(255, 255, 255, 0.16);
+  --text-0: #f7f6f2;
+  --text-1: #dcdbd2;
+  --text-2: #a3a3b8;
+  --text-3: #70708a;
+  --paper: #f4f2ec;
+  --paper-2: #e9e7df;
+  --ink-on-paper: #181a26;
+  --muted-on-paper: #5a6175;
+  --indigo: oklch(0.78 0.13 265);
+  --indigo-2: oklch(0.88 0.08 265);
+  --indigo-deep: oklch(0.58 0.16 265);
+  --amber: #f5b544;
+  --amber-2: #ffd27a;
 }
 
 html {
@@ -40,28 +65,81 @@ html {
 }
 
 body {
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafaff;
-  background-image:
-    radial-gradient(ellipse 80% 50% at 20% 0%, rgba(79, 70, 229, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+  background-color: var(--ink-950);
+  color: var(--text-0);
+  overflow-x: hidden;
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* Grain overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 
 ::selection {
-  background-color: var(--color-indigo-200);
-  color: var(--color-indigo-900);
+  background: var(--indigo);
+  color: #fff;
 }
 
-/* Decorative section divider */
-.section-divider {
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--color-indigo-200) 30%,
-    var(--color-amber-200) 70%,
-    transparent
-  );
+/* Ticker marquee animation */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+/* Metric bar fill animation */
+@keyframes barIn {
+  to { transform: scaleX(1); }
+}
+
+.animate-bar-in {
+  animation: barIn 1.6s ease-out forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* Pulse dot */
+@keyframes pulseDot {
+  0% { box-shadow: 0 0 0 0 rgba(93, 211, 158, 0.6); }
+  70% { box-shadow: 0 0 0 10px rgba(93, 211, 158, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(93, 211, 158, 0); }
+}
+
+.animate-pulse-dot {
+  animation: pulseDot 2s infinite;
+}
+
+/* Timeline node pulse */
+@keyframes pulseDark {
+  0% { box-shadow: 0 0 0 0 rgba(124, 131, 255, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(124, 131, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(124, 131, 255, 0); }
+}
+
+.animate-pulse-dark {
+  animation: pulseDark 2s infinite;
+}
+
+/* Signal waveform bar */
+@keyframes sig {
+  0%, 100% { height: 20%; }
+  50% { height: 100%; }
+}
+
+.animate-sig {
+  animation: sig 1.4s ease-in-out infinite;
 }

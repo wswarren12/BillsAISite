@@ -1,5 +1,7 @@
 import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import SideNav from "@/components/layout/SideNav";
+import Ticker from "@/components/layout/Ticker";
+import SignalStrip from "@/components/layout/SignalStrip";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Experience from "@/components/sections/Experience";
@@ -8,29 +10,22 @@ import Skills from "@/components/sections/Skills";
 import Education from "@/components/sections/Education";
 import Contact from "@/components/sections/Contact";
 
-function Divider() {
-  return <div className="section-divider mx-auto max-w-4xl" />;
-}
-
 export default function Home() {
   return (
     <>
       <Header />
+      <SideNav />
       <main>
         <Hero />
-        <Divider />
+        <Ticker />
         <About />
-        <Divider />
+        <SignalStrip />
         <Experience />
-        <Divider />
         <Projects />
-        <Divider />
         <Skills />
-        <Divider />
         <Education />
         <Contact />
       </main>
-      <Footer />
     </>
   );
 }
