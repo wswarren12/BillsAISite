@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-09T19:10:41Z",
+  "title": "Design System: Bill Warren — billsai.club",
+  "extensions": {
+    "colorMeta": {
+      "sky": { "role": "neutral", "displayName": "Instruction Sky", "canonical": "#a9dbff", "tonalRamp": ["#0b2a42", "#12456b", "#1a6194", "#2f84bf", "#5fa9de", "#8ecdf7", "#a9dbff", "#e3f3ff"] },
+      "ink": { "role": "neutral", "displayName": "Keyline Ink", "canonical": "#111111", "tonalRamp": ["#111111", "#2a2f36", "#3a3f4a", "#555b66", "#7a808a", "#a9a9a9", "#d9d9d9", "#f4f4f4"] },
+      "ink-2": { "role": "neutral", "displayName": "Rules Ink", "canonical": "#2a2f36", "tonalRamp": ["#111111", "#2a2f36", "#3a3f4a", "#555b66", "#7a808a", "#a9a9a9", "#d9d9d9", "#f4f4f4"] },
+      "brick": { "role": "primary", "displayName": "Brick Red", "canonical": "#e53935", "tonalRamp": ["#4a0f0e", "#7a1815", "#b3231f", "#c62828", "#e53935", "#ef6f6a", "#f7a6a3", "#fde3e2"] },
+      "brick-deep": { "role": "primary", "displayName": "Brick Red Deep", "canonical": "#c62828", "tonalRamp": ["#4a0f0e", "#7a1815", "#b3231f", "#c62828", "#e53935", "#ef6f6a", "#f7a6a3", "#fde3e2"] },
+      "brick-pressed": { "role": "primary", "displayName": "Brick Red Pressed", "canonical": "#b3231f", "tonalRamp": ["#4a0f0e", "#7a1815", "#b3231f", "#c62828", "#e53935", "#ef6f6a", "#f7a6a3", "#fde3e2"] },
+      "yellow": { "role": "secondary", "displayName": "Build Yellow", "canonical": "#ffcd00", "tonalRamp": ["#4d3d00", "#806600", "#b38f00", "#d9a900", "#ffcd00", "#ffdb4d", "#ffe98a", "#fff7d1"] },
+      "blue": { "role": "secondary", "displayName": "Control Blue", "canonical": "#147bd1", "tonalRamp": ["#062a49", "#0a3f6e", "#0d5fa3", "#147bd1", "#3f97de", "#74b6ea", "#a9d3f4", "#e3f1fc"] },
+      "blue-deep": { "role": "secondary", "displayName": "Control Blue Deep", "canonical": "#0d5fa3", "tonalRamp": ["#062a49", "#0a3f6e", "#0d5fa3", "#147bd1", "#3f97de", "#74b6ea", "#a9d3f4", "#e3f1fc"] },
+      "green": { "role": "tertiary", "displayName": "Set Green", "canonical": "#2e9e5b", "tonalRamp": ["#0d3a20", "#165c33", "#1f7a45", "#2e9e5b", "#54b579", "#86cc9f", "#b9e2c8", "#e6f5ec"] },
+      "plate": { "role": "tertiary", "displayName": "Plate Gray", "canonical": "#d9d9d9", "tonalRamp": ["#111111", "#3a3f4a", "#5c5c5c", "#8a8a8a", "#a9a9a9", "#c4c4c4", "#d9d9d9", "#f4f4f4"] },
+      "slate": { "role": "tertiary", "displayName": "Slate Brick", "canonical": "#3a3f4a", "tonalRamp": ["#111111", "#1f232b", "#2a2f36", "#3a3f4a", "#555b66", "#7a808a", "#a9adb5", "#dcdfe3"] },
+      "paper": { "role": "neutral", "displayName": "Paper White", "canonical": "#ffffff", "tonalRamp": ["#111111", "#3a3f4a", "#6b6b6b", "#9a9a9a", "#c4c4c4", "#e6e6e6", "#f4f4f4", "#ffffff"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The cover title \"Bill Warren\" and the contact \"Build complete.\" Set with the .numeral register (tabular figures)." },
+      "step-numeral": { "displayName": "Step numeral", "purpose": "The \"01\"–\"06\" in each step's diagram panel; aria-hidden, decorative to the step title." },
+      "headline": { "displayName": "Headline", "purpose": "Section heads inside their intro box — \"Steps 01–06\", \"Sets\", \"Also included\"." },
+      "title": { "displayName": "Title", "purpose": "Role titles in steps; 24px for set names; 20px for institution / organization names." },
+      "subtitle": { "displayName": "Subtitle", "purpose": "The company under a role title, in Control Blue Deep; 15px for a set tagline or degree." },
+      "lead": { "displayName": "Lead", "purpose": "The fixed cover sentence and section intros; max-width 36–52ch; text-wrap: pretty." },
+      "body": { "displayName": "Body", "purpose": "Descriptions and achievements in Rules Ink; max-width 60–62ch." },
+      "metric": { "displayName": "Metric", "purpose": "Inventory counts, \"1x\" call-out counts, and sub-step indices. Always .numeral." },
+      "label": { "displayName": "Label", "purpose": "The set-metadata register — UPPERCASE 12–13px tracked. Lives at the head or foot of a box, never above a heading as a kicker." },
+      "button": { "displayName": "Button", "purpose": "All .btn text; 14px for in-box secondary actions and nav tabs." }
+    },
+    "shadows": [
+      { "name": "hard-underside", "value": "0 4px 0 var(--ink)", "purpose": "Every .btn at rest. Hover: translateY(2px) + 0 2px 0. Active: translateY(4px) + 0 0 0. Buttons only; no blur shadows anywhere." }
+    ],
+    "motion": [
+      { "name": "dropIn", "value": "700ms cubic-bezier(0.2, 0.9, 0.2, 1) both", "purpose": "The highlighted piece drops in along its arrow when a step scrolls 35% into view (translateY(-var(--drop)) → 0, opacity 0 → 1). Disabled under prefers-reduced-motion." },
+      { "name": "arrowPulse", "value": "1.4s ease-in-out infinite", "purpose": "The blue placement arrow bobs 6px. Disabled under prefers-reduced-motion." },
+      { "name": "button-press", "value": "120ms ease-out", "purpose": "transform / box-shadow / background on .btn hover and active. No transition and no transform under prefers-reduced-motion." },
+      { "name": "accordion", "value": "grid-template-rows 300ms ease-out", "purpose": "Sub-steps expand 0fr → 1fr; chevron rotates 180° in 200ms. None under prefers-reduced-motion." },
+      { "name": "box-art-lift", "value": "transform 300ms ease-out", "purpose": "Set card box art translates up 4px on card hover." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "page-max", "value": "1320px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one ask — bill@billsai.club / Email me. Brick Red Deep block with the hard 4px ink underside; presses 2px on hover, 4px on active.",
+      "html": "<a class=\"ds-btn ds-btn-brick\" href=\"mailto:bill@billsai.club\">bill@billsai.club<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 24px; border: var(--keyline, 2px) solid var(--ink, #111111); border-radius: 6px; font-family: Rubik, system-ui, sans-serif; font-weight: 700; font-size: 16px; line-height: 1; text-decoration: none; color: var(--ink, #111111); background: var(--paper, #ffffff); box-shadow: 0 4px 0 var(--ink, #111111); transform: translateY(0); transition: transform 120ms ease-out, box-shadow 120ms ease-out, background 120ms; cursor: pointer; } .ds-btn:hover { transform: translateY(2px); box-shadow: 0 2px 0 var(--ink, #111111); } .ds-btn:active { transform: translateY(4px); box-shadow: 0 0 0 var(--ink, #111111); } .ds-btn:focus-visible { outline: 3px solid var(--blue, #147bd1); outline-offset: 3px; } .ds-btn-brick { background: var(--brick-deep, #c62828); color: var(--paper, #ffffff); } .ds-btn-brick:hover { background: #b3231f; } @media (prefers-reduced-motion: reduce) { .ds-btn, .ds-btn:hover, .ds-btn:active { transition: none; transform: none; box-shadow: 0 4px 0 var(--ink, #111111); } }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "The secondary artifact — Résumé (PDF). Paper White block, ink text, drawn download mark, same hard underside and press.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">Résumé (PDF)<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 4v11\"/><path d=\"M7 10l5 5 5-5\"/><path d=\"M4 20h16\"/></svg></a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 24px; border: var(--keyline, 2px) solid var(--ink, #111111); border-radius: 6px; font-family: Rubik, system-ui, sans-serif; font-weight: 700; font-size: 16px; line-height: 1; text-decoration: none; color: var(--ink, #111111); background: var(--paper, #ffffff); box-shadow: 0 4px 0 var(--ink, #111111); transform: translateY(0); transition: transform 120ms ease-out, box-shadow 120ms ease-out; cursor: pointer; } .ds-btn-outline:hover { transform: translateY(2px); box-shadow: 0 2px 0 var(--ink, #111111); } .ds-btn-outline:active { transform: translateY(4px); box-shadow: 0 0 0 var(--ink, #111111); } .ds-btn-outline:focus-visible { outline: 3px solid var(--blue, #147bd1); outline-offset: 3px; } @media (prefers-reduced-motion: reduce) { .ds-btn-outline, .ds-btn-outline:hover, .ds-btn-outline:active { transition: none; transform: none; box-shadow: 0 4px 0 var(--ink, #111111); } }"
+    },
+    {
+      "name": "Blue Button",
+      "kind": "button",
+      "refersTo": "button-blue",
+      "description": "The form submit — Control Blue Deep block with white text, full width in the form. Disabled at 60% opacity with no press.",
+      "html": "<button class=\"ds-btn-blue\" type=\"submit\">Send it<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-btn-blue { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 0 24px; border: var(--keyline, 2px) solid var(--ink, #111111); border-radius: 6px; font-family: Rubik, system-ui, sans-serif; font-weight: 700; font-size: 16px; line-height: 1; color: var(--paper, #ffffff); background: var(--blue-deep, #0d5fa3); box-shadow: 0 4px 0 var(--ink, #111111); transform: translateY(0); transition: transform 120ms ease-out, box-shadow 120ms ease-out; cursor: pointer; } .ds-btn-blue:hover { transform: translateY(2px); box-shadow: 0 2px 0 var(--ink, #111111); } .ds-btn-blue:active { transform: translateY(4px); box-shadow: 0 0 0 var(--ink, #111111); } .ds-btn-blue:focus-visible { outline: 3px solid var(--blue, #147bd1); outline-offset: 3px; } .ds-btn-blue:disabled { opacity: 0.6; cursor: not-allowed; transform: none; } @media (prefers-reduced-motion: reduce) { .ds-btn-blue, .ds-btn-blue:hover, .ds-btn-blue:active { transition: none; transform: none; box-shadow: 0 4px 0 var(--ink, #111111); } }"
+    },
+    {
+      "name": "Tab Nav",
+      "kind": "nav",
+      "refersTo": "nav-tab",
+      "description": "The header's section tabs in a keyline box: 700/14px, numeral short-codes at 70% opacity, 2px ink separators, active tab fills Control Blue Deep with white text.",
+      "html": "<nav class=\"ds-tabs\" aria-label=\"Sections\"><a class=\"ds-tab\" href=\"#cover\"><span class=\"ds-tab-code\">00</span>Cover</a><a class=\"ds-tab ds-tab-active\" href=\"#steps\" aria-current=\"true\"><span class=\"ds-tab-code\">01–06</span>Steps</a><a class=\"ds-tab\" href=\"#sets\">Sets</a><a class=\"ds-tab\" href=\"#extras\">Extras</a><a class=\"ds-tab\" href=\"#contact\">Contact</a></nav>",
+      "css": ".ds-tabs { display: inline-flex; align-items: stretch; height: 56px; overflow: hidden; border: var(--keyline, 2px) solid var(--ink, #111111); border-radius: 6px; background: var(--paper, #ffffff); font-family: Rubik, system-ui, sans-serif; } .ds-tab { display: flex; align-items: center; gap: 8px; padding: 0 16px; font-size: 14px; font-weight: 700; text-decoration: none; color: var(--ink, #111111); background: transparent; transition: color 150ms, background-color 150ms; } .ds-tab + .ds-tab { border-left: 2px solid var(--ink, #111111); } .ds-tab:hover { background: var(--sky, #a9dbff); } .ds-tab:focus-visible { outline: 3px solid var(--blue, #147bd1); outline-offset: -3px; } .ds-tab-active, .ds-tab-active:hover { background: var(--blue-deep, #0d5fa3); color: var(--paper, #ffffff); } .ds-tab-code { font-size: 12px; font-weight: 900; line-height: 0.85; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; opacity: 0.7; }"
+    },
+    {
+      "name": "Keyline Box + Sky Box",
+      "kind": "card",
+      "refersTo": "box",
+      "description": "The instruction book's only container: 2px ink keyline, 6px radius, Paper White or Instruction Sky fill. A label at the head, a small badge top-right, internal splits in the same 2px ink.",
+      "html": "<div class=\"ds-box\"><div class=\"ds-box-panel\"><div class=\"ds-box-head\"><span class=\"ds-box-label\">Finished model</span><span class=\"ds-box-badge\">1x</span></div></div><div class=\"ds-box-body\"><div class=\"ds-box-title\">Keyline box</div><p class=\"ds-box-text\">Every container is a 2px ink keyline on paper or sky. Nothing floats; nothing blurs.</p></div></div>",
+      "css": ".ds-box { border: var(--keyline, 2px) solid var(--ink, #111111); border-radius: 6px; background: var(--paper, #ffffff); color: var(--ink, #111111); overflow: hidden; font-family: Rubik, system-ui, sans-serif; max-width: 360px; } .ds-box-panel { background: var(--sky, #a9dbff); border-bottom: 2px solid var(--ink, #111111); padding: 20px; min-height: 96px; } .ds-box-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; } .ds-box-label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; } .ds-box-badge { border: 2px solid var(--ink, #111111); border-radius: 6px; background: var(--paper, #ffffff); padding: 4px 10px; font-size: 12px; font-weight: 800; line-height: 1.2; } .ds-box-body { padding: 20px; } .ds-box-title { font-size: 24px; font-weight: 800; letter-spacing: -0.025em; line-height: 1.05; } .ds-box-text { margin: 12px 0 0; font-size: 14px; line-height: 1.6; color: var(--ink-2, #2a2f36); }"
+    },
+    {
+      "name": "Metric Chip",
+      "kind": "chip",
+      "refersTo": "chip-metric",
+      "description": "A metric stamped under a step description: Build Yellow keyline box, 800/13px ink text, wrapped in a row with 8px gaps.",
+      "html": "<ul class=\"ds-chips\"><li class=\"ds-chip\">190+ Ventures</li><li class=\"ds-chip\">Cash + Crypto + Venture Trust</li></ul>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; font-family: Rubik, system-ui, sans-serif; } .ds-chip { border: var(--keyline, 2px) solid var(--ink, #111111); border-radius: 6px; background: var(--yellow, #ffcd00); color: var(--ink, #111111); padding: 6px 12px; font-size: 13px; font-weight: 800; line-height: 1.2; }"
+    },
+    {
+      "name": "Status Tag",
+      "kind": "chip",
+      "refersTo": "tag-status-live",
+      "description": "Set status and step state: UPPERCASE 800/12px tracked label in a keyline box, filled by status — Set Green in stock, Build Yellow coming soon / current step, Control Blue in development, Plate Gray experiment. Ink text on all.",
+      "html": "<div class=\"ds-tags\"><span class=\"ds-tag ds-tag-live\">In stock</span><span class=\"ds-tag ds-tag-soon\">Coming soon</span><span class=\"ds-tag ds-tag-dev\">In development</span><span class=\"ds-tag ds-tag-exp\">Experiment</span><span class=\"ds-tag ds-tag-soon\"><span class=\"ds-tag-dot\"></span>Current step</span></div>",
+      "css": ".ds-tags { display: flex; flex-wrap: wrap; gap: 8px; font-family: Rubik, system-ui, sans-serif; } .ds-tag { display: inline-flex; align-items: center; gap: 6px; border: var(--keyline, 2px) solid var(--ink, #111111); border-radius: 6px; color: var(--ink, #111111); padding: 4px 10px; font-size: 12px; font-weight: 800; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.06em; } .ds-tag-live { background: var(--green, #2e9e5b); } .ds-tag-soon { background: var(--yellow, #ffcd00); } .ds-tag-dev { background: var(--blue, #147bd1); } .ds-tag-exp { background: var(--plate, #d9d9d9); } .ds-tag-dot { width: 8px; height: 8px; border-radius: 9999px; background: var(--ink, #111111); }"
+    },
+    {
+      "name": "Step Numeral + 1:1 Call-out",
+      "kind": "custom",
+      "refersTo": "step-numeral",
+      "description": "The head of a step's sky panel: the 900-weight step numeral top-left and a keyline call-out box top-right holding the piece drawn alone (isometric, 2px ink stroke), its \"1x\" count, and its footprint as an 11px uppercase label.",
+      "html": "<div class=\"ds-step-head\"><div class=\"ds-step-numeral\" aria-hidden=\"true\">06</div><div class=\"ds-callout\"><svg class=\"ds-callout-brick\" viewBox=\"-24 -20 48 48\" aria-hidden=\"true\" stroke-linejoin=\"round\"><polygon points=\"-20.78,-2.4 0,9.6 0,24 -20.78,12\" fill=\"#9c2a27\" stroke=\"var(--ink, #111111)\" stroke-width=\"2\"/><polygon points=\"20.78,-2.4 0,9.6 0,24 20.78,12\" fill=\"#b93230\" stroke=\"var(--ink, #111111)\" stroke-width=\"2\"/><polygon points=\"0,-14.4 20.78,-2.4 0,9.6 -20.78,-2.4\" fill=\"var(--brick, #e53935)\" stroke=\"var(--ink, #111111)\" stroke-width=\"2\"/><ellipse cx=\"0\" cy=\"-10.6\" rx=\"3.6\" ry=\"1.8\" fill=\"var(--brick, #e53935)\" stroke=\"var(--ink, #111111)\" stroke-width=\"1.5\"/><ellipse cx=\"10.39\" cy=\"-4.6\" rx=\"3.6\" ry=\"1.8\" fill=\"var(--brick, #e53935)\" stroke=\"var(--ink, #111111)\" stroke-width=\"1.5\"/><ellipse cx=\"-10.39\" cy=\"-4.6\" rx=\"3.6\" ry=\"1.8\" fill=\"var(--brick, #e53935)\" stroke=\"var(--ink, #111111)\" stroke-width=\"1.5\"/><ellipse cx=\"0\" cy=\"1.4\" rx=\"3.6\" ry=\"1.8\" fill=\"var(--brick, #e53935)\" stroke=\"var(--ink, #111111)\" stroke-width=\"1.5\"/></svg><div class=\"ds-callout-meta\"><div class=\"ds-callout-count\">1x</div><div class=\"ds-callout-size\">2×2</div></div></div></div>",
+      "css": ".ds-step-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 20px; background: var(--sky, #a9dbff); border: var(--keyline, 2px) solid var(--ink, #111111); border-radius: 6px; color: var(--ink, #111111); font-family: Rubik, system-ui, sans-serif; max-width: 420px; } .ds-step-numeral { font-size: clamp(72px, 10vw, 140px); font-weight: 900; line-height: 0.85; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; } .ds-callout { display: flex; align-items: center; gap: 12px; flex-shrink: 0; padding: 10px; border: var(--keyline, 2px) solid var(--ink, #111111); border-radius: 6px; background: var(--paper, #ffffff); } .ds-callout-brick { width: 72px; height: 52px; } .ds-callout-meta { line-height: 1.1; } .ds-callout-count { font-size: 22px; font-weight: 900; line-height: 0.85; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; } .ds-callout-size { margin-top: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "A form field drawn as a keyline box: 500/16px on Paper White, 700/14px label above, 3px Control Blue focus ring at 3px offset. Error turns the keyline Brick Red with a Brick Red Deep message below.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-label\" for=\"ds-name\">Name</label><input class=\"ds-input\" id=\"ds-name\" type=\"text\" placeholder=\"Your name\" autocomplete=\"name\"></div><div class=\"ds-field\"><label class=\"ds-label\" for=\"ds-email\">Email</label><input class=\"ds-input ds-input-error\" id=\"ds-email\" type=\"email\" value=\"bill@\" aria-invalid=\"true\" aria-describedby=\"ds-email-error\"><p class=\"ds-error\" id=\"ds-email-error\">That email doesn't look right — check the @ and domain.</p></div>",
+      "css": ".ds-field { display: block; margin-bottom: 16px; font-family: Rubik, system-ui, sans-serif; max-width: 320px; } .ds-label { display: block; margin-bottom: 6px; font-size: 14px; font-weight: 700; color: var(--ink, #111111); } .ds-input { display: block; width: 100%; padding: 12px 16px; border: var(--keyline, 2px) solid var(--ink, #111111); border-radius: 6px; background: var(--paper, #ffffff); color: var(--ink, #111111); font-family: inherit; font-size: 16px; font-weight: 500; line-height: 1.4; transition: border-color 120ms; } .ds-input::placeholder { color: #7a808a; } .ds-input:hover { border-color: var(--ink-2, #2a2f36); } .ds-input:focus-visible { outline: 3px solid var(--blue, #147bd1); outline-offset: 3px; } .ds-input-error, .ds-input-error:hover { border-color: var(--brick, #e53935); } .ds-error { margin: 6px 0 0; font-size: 13px; font-weight: 600; color: var(--brick-deep, #c62828); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Build Instructions",
+    "overview": "The site is a brick build-instruction book. A career is one model; six numbered steps each add a piece to it, and the reader follows them in order to the current step and then emails the builder. Everything on the page is drawn the way an instruction book draws: flat sky-blue paper ruled by a stud grid, black keyline boxes for every panel, oversized step numerals, a 1:1 call-out of the piece being added, a dashed landing zone and a blue arrow showing where it goes, and a parts inventory pinned to the cover. The isometric bricks are the only illustration system; there is no photography and no decorative imagery.\n\nThe mood is warm, precise, confident, and playful-but-executive. The voice balances direct-warm-wry (\"Things I've vibe-coded into existence\", \"Build complete.\") with crisp-executive (metrics first, outcomes stated plainly). The world is dense with boxes but never crowded: each box carries one job, the type is large and heavy, and generous 24px gutters keep the page breathing. It is a deliberate refusal of the dark dev-portfolio hero — no particles, no count-ups, no gradient text — and of crypto/web3 neon: no glowing cyan or magenta, no glass panels, no 3D coins.\n\nThe material is printed paper. Nothing floats, glows, or blurs. The only depth is the 4px hard underside on a button (which presses down when you push it) and the isometric drawing of a brick. Every container is a 2px ink keyline; every control is a block. It reads as a physical kit.",
+    "keyCharacteristics": [
+      "Sky-blue instruction paper with a 24px stud-grid dot pattern as the page ground",
+      "2px ink keyline boxes with a 6px radius as the only container; internal dividers are the same 2px ink",
+      "Rubik as the single typeface, weight 900 for oversized numerals and display, 800/700 for headings and labels, 400–600 for rules text",
+      "Isometric SVG bricks drawn with a 2px ink stroke; ghost pieces for what is built, red for what is being added, blue for the arrow and landing zone",
+      "Buttons are blocks with a hard 4px ink underside that press down 2px on hover and 4px on press",
+      "Flat paper: no blur shadows, gradients, glass, or glow anywhere",
+      "Uppercase 12–13px tracked labels as the book's set-metadata register, at the head or foot of a box"
+    ],
+    "rules": [
+      { "name": "The Added-Piece Rule", "body": "Brick Red marks what is being added right now — the current piece, the primary email button, the brand block. Ghost pieces (dashed 45% ink stroke, 35% white fill) mark what is already built. Control Blue marks the control layer only: the arrow, the landing zone, the active tab, the submit button, the focus ring, and company/tagline sub-heads. Build Yellow holds inventory and metrics.", "section": "colors" },
+      { "name": "The Deep-For-Text Rule", "body": "When red or blue must carry white text, use the deep tint: Brick Red deepens to Brick Red Deep (#c62828) and Control Blue deepens to Control Blue Deep (#0d5fa3). The bright tints (#e53935, #147bd1) are for drawn pieces and marks only, never under white type.", "section": "colors" },
+      { "name": "The One Face Rule", "body": "Rubik is the only typeface on the site — display, headings, rules text, labels, numerals and buttons all set in it. Weight does the differentiating: 900 for numerals and display, 800/700 for headings and labels, 400–600 for rules text. A second face, a monospace, or a system display face never appears.", "section": "typography" },
+      { "name": "The Stud Module Rule", "body": "The stud is 24px. The page ground is a dot grid on that module, and alignment snaps to it: 24px section padding and gutters, 24px card gaps, 48px/80px section rhythm, 56px controls aligned to the header row.", "section": "layout" },
+      { "name": "The Hard-Underside Rule", "body": "Buttons — and only buttons — carry a hard 4px ink underside (box-shadow: 0 4px 0 var(--ink)). Hover drops the block 2px and the underside to 2px; active drops it the full 4px to zero. Boxes, chips, tags and inputs sit flat.", "section": "elevation" },
+      { "name": "The Flat Paper Rule", "body": "No blur shadows anywhere. Depth exists in exactly two forms: the hard 4px underside on a button and the isometric drawing of a brick. Nothing else lifts.", "section": "elevation" },
+      { "name": "The Keyline Rule", "body": "Every container is a 2px solid ink keyline with a 6px radius on paper or sky. There is no other container: no borderless card, no tinted panel without a keyline, no hairline divider (internal dividers are the same 2px ink).", "section": "shapes" },
+      { "name": "The Drawn-Arrow Rule", "body": "Icons are stroked SVG drawn at 2.5 stroke weight with round caps and joins, inheriting currentColor — the arrow, the download mark, the menu lines. No icon fonts, no glyph characters, no filled icon sets.", "section": "components" }
+    ],
+    "dos": [
+      "Do put every piece of content inside a keyline box (2px ink, 6px radius) on Paper White or Instruction Sky; divide inside it with the same 2px ink.",
+      "Do give every button the hard 4px underside and the 2px/4px press on hover/active; keep min-height 56px (48px for in-box secondary actions).",
+      "Do set metadata labels as UPPERCASE 12–13px weight 700 with 0.06em tracking, and place them at the head or foot of a box.",
+      "Do set numerals — step numbers, metric counts, \"1x\" counts — in the .numeral register: weight 900, line-height 0.85, tracking -0.04em, tabular figures.",
+      "Do use Build Yellow keyline chips for metrics and Set Green / Build Yellow / Control Blue / Plate Gray keyline tags for status, always with ink text.",
+      "Do draw icons as 2.5-weight stroked SVG in currentColor, 14–18px, sitting after the label with a 10px gap.",
+      "Do honor prefers-reduced-motion: pieces appear without dropIn, arrows stop pulsing, the accordion snaps, and buttons hold their 4px underside without transitions.",
+      "Do snap padding and gaps to the 24px stud module (24px gutters and card gaps, 48/80px section rhythm)."
+    ],
+    "donts": [
+      "Don't use blur shadows, glows, glass panels, or gradients — the only depth is the button underside and the isometric brick.",
+      "Don't add a second typeface, a monospace, or a system display face; Rubik at another weight is the answer.",
+      "Don't put white text on bright Brick Red (#e53935) or Control Blue (#147bd1); use Brick Red Deep or Control Blue Deep.",
+      "Don't use glyph characters or icon fonts for arrows and marks; draw them.",
+      "Don't set an uppercase label as a kicker above a heading; labels belong to a box's head or foot.",
+      "Don't use a container without a keyline — no borderless cards, no tinted panels, no hairline dividers.",
+      "Don't reach for crypto/web3 neon (cyan/magenta glow), dark heroes, particles, count-up numbers, or gradient text.",
+      "Don't use a radius other than 6px on boxes and buttons and 4px on tags and the brand block; corners are never pill-shaped except the stud dots."
+    ]
+  }
+}

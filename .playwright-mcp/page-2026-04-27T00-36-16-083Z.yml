@@ -1,0 +1,532 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Bill Warren / product" [ref=e4] [cursor=pointer]:
+        - /url: "#hero"
+        - generic [ref=e8]: Bill Warren
+        - generic [ref=e9]: / product
+      - navigation [ref=e10]:
+        - link "About" [ref=e11] [cursor=pointer]:
+          - /url: "#about"
+        - link "Experience" [ref=e12] [cursor=pointer]:
+          - /url: "#experience"
+        - link "Projects" [ref=e13] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Skills" [ref=e14] [cursor=pointer]:
+          - /url: "#skills"
+        - link "Education" [ref=e15] [cursor=pointer]:
+          - /url: "#education"
+      - link "Contact →" [ref=e17] [cursor=pointer]:
+        - /url: "#contact"
+  - generic:
+    - button "Top":
+      - generic: Top
+    - button "About":
+      - generic: About
+    - button "Experience":
+      - generic: Experience
+    - button "Projects":
+      - generic: Projects
+    - button "Skills":
+      - generic: Skills
+    - button "Education":
+      - generic: Education
+    - button "Contact":
+      - generic: Contact
+  - main [ref=e18]:
+    - generic [ref=e21]:
+      - generic [ref=e24]: Currently Head of Product at Game7 / Summon
+      - heading "Bill Warren Building the 0→1" [level=1] [ref=e25]:
+        - generic [ref=e26]: Bill Warren
+        - generic [ref=e27]: Building the 0→1
+      - paragraph [ref=e28]:
+        - text: Product leader at the intersection of
+        - generic [ref=e29]: ▊
+        - text: Turning complex problems into products people love.
+      - generic [ref=e30]:
+        - link "Let's work together" [ref=e31] [cursor=pointer]:
+          - /url: "#contact"
+          - text: Let's work together
+          - img [ref=e32]
+        - link "View experience →" [ref=e35] [cursor=pointer]:
+          - /url: "#experience"
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e39]: 0K+
+          - generic [ref=e40]: Platform users
+        - generic [ref=e41]:
+          - generic [ref=e43]: $0M+
+          - generic [ref=e44]: $ processed
+        - generic [ref=e45]:
+          - generic [ref=e47]: 0M+
+          - generic [ref=e48]: Tasks completed
+        - generic [ref=e49]:
+          - generic [ref=e51]: 0+
+          - generic [ref=e52]: Yrs leading product
+    - generic [ref=e54]:
+      - generic [ref=e55]: AI product strategy
+      - generic [ref=e57]: Gamification systems
+      - generic [ref=e59]: Smart contracts
+      - generic [ref=e61]: Tokenomics design
+      - generic [ref=e63]: 0-to-1 platforms
+      - generic [ref=e65]: Venture fundraising
+      - generic [ref=e67]: Agent architectures
+      - generic [ref=e69]: No-code builders
+      - generic [ref=e71]: Behavioral design
+      - generic [ref=e73]: Marketplace strategy
+      - generic [ref=e75]: Web3 communities
+      - generic [ref=e77]: AI product strategy
+      - generic [ref=e79]: Gamification systems
+      - generic [ref=e81]: Smart contracts
+      - generic [ref=e83]: Tokenomics design
+      - generic [ref=e85]: 0-to-1 platforms
+      - generic [ref=e87]: Venture fundraising
+      - generic [ref=e89]: Agent architectures
+      - generic [ref=e91]: No-code builders
+      - generic [ref=e93]: Behavioral design
+      - generic [ref=e95]: Marketplace strategy
+      - generic [ref=e97]: Web3 communities
+    - generic [ref=e101]:
+      - generic [ref=e102]:
+        - generic [ref=e103]: 01 / About
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - generic [ref=e107]: Based
+            - generic [ref=e108]: Hillsborough, NC
+          - generic [ref=e109]:
+            - generic [ref=e110]: Role
+            - generic [ref=e111]: Head of Product
+          - generic [ref=e112]:
+            - generic [ref=e113]: Company
+            - generic [ref=e114]: Game7 / Summon
+          - generic [ref=e115]:
+            - generic [ref=e116]: Avail.
+            - generic [ref=e117]: Advisory + Speaking
+          - generic [ref=e118]:
+            - generic [ref=e119]: Edu
+            - generic [ref=e120]: Duke Law JD
+      - generic [ref=e121]:
+        - paragraph [ref=e122]:
+          - text: I'm a product leader who thrives at the intersection of
+          - emphasis [ref=e123]: emerging technology
+          - text: and
+          - emphasis [ref=e124]: real-world impact
+          - text: . Over the past seven years, I've built and scaled platforms across AI, Web3, and fintech — from founding a startup spun out of ConsenSys to leading product at one of gaming's fastest-growing engagement platforms.
+        - paragraph [ref=e125]:
+          - text: At
+          - emphasis [ref=e126]: Game7 / Summon
+          - text: ", I led the evolution from a manual questing tool to an AI-powered engagement platform serving"
+          - emphasis [ref=e127]: 500K+ users
+          - text: . At
+          - emphasis [ref=e128]: Opolis
+          - text: ", I shipped smart contract–based payroll infrastructure that's processed over"
+          - emphasis [ref=e129]: $30M
+          - text: in transactions.
+        - paragraph [ref=e130]:
+          - text: Before tech, I practiced corporate law at
+          - emphasis [ref=e131]: WilmerHale
+          - text: ", advising startups on venture financing and M&A. My"
+          - emphasis [ref=e132]: Duke Law JD
+          - text: gives me an edge in stakeholder communication, contract negotiation, and navigating regulatory complexity.
+    - generic [ref=e135]:
+      - generic [ref=e136]:
+        - generic [ref=e137]: ◉ Signal
+        - generic [ref=e138]: — currently processing
+      - generic [ref=e139]: Building what comes after the feature request.
+    - generic [ref=e190]:
+      - generic [ref=e191]:
+        - generic [ref=e193]: 02 / Experience
+        - generic [ref=e195]:
+          - heading "Seven years of shipping at the edge of new platforms." [level=2] [ref=e196]
+          - paragraph [ref=e197]: From founding a venture-backed startup to leading product at hyper-growth platforms — each role is an expandable timeline node with full context.
+      - generic [ref=e198]:
+        - generic [ref=e199] [cursor=pointer]:
+          - generic [ref=e200]:
+            - text: July 2023 — Present
+            - generic [ref=e202]: ● LIVE
+          - generic [ref=e203]:
+            - heading "Head of Product at Game7 / Summon" [level=3] [ref=e204]:
+              - text: Head of Product
+              - generic [ref=e205]: at Game7 / Summon
+            - paragraph [ref=e206]: Led product, engineering, and design teams for Summon, an AI-powered community engagement platform primarily serving gaming and decentralized finance ecosystems.
+            - generic [ref=e207]:
+              - generic [ref=e208]: AI/ML
+              - generic [ref=e209]: Gamification
+              - generic [ref=e210]: Web3
+              - generic [ref=e211]: Platform Strategy
+            - generic [ref=e213]:
+              - list [ref=e214]:
+                - listitem [ref=e215]:
+                  - generic [ref=e216]: →
+                  - text: Defined product vision and roadmap for Summon's evolution from manual questing tool to AI-driven engagement platform, introducing agent-based landing page generation, task creation, automated data analysis, and intelligent gamification mechanics — reducing onboarding overhead by 90%.
+                - listitem [ref=e217]:
+                  - generic [ref=e218]: →
+                  - text: Scaled the Game7 community platform to 500K+ registered users who completed 28M+ tasks across gaming partner campaigns over a 9-month period.
+                - listitem [ref=e219]:
+                  - generic [ref=e220]: →
+                  - text: Designed and shipped a full-stack gamification system including Quests, Leaderboards, Rewards Loot Boxes, Token Staking, Token Sinks and progressive engagement mechanics grounded in behavioral economics to drive 30%+ monthly user retention.
+                - listitem [ref=e221]:
+                  - generic [ref=e222]: →
+                  - text: Partnered directly with gaming studios and finance protocols to scope and deliver activity-based campaigns tied to measurable growth KPIs.
+                - listitem [ref=e223]:
+                  - generic [ref=e224]: →
+                  - text: Built and led a cross-functional team of product managers, engineers, designers, and QA, implementing agile practices and shipping iteratively in fast-moving Web3 and AI landscapes.
+                - listitem [ref=e225]:
+                  - generic [ref=e226]: →
+                  - text: Architected a connector and quest builder framework enabling no-code campaign creation for non-technical partners, dramatically expanding the platform's addressable market.
+              - generic [ref=e227]:
+                - generic [ref=e228]:
+                  - generic [ref=e229]: Metric
+                  - generic [ref=e230]: 500K+ Users
+                - generic [ref=e231]:
+                  - generic [ref=e232]: Metric
+                  - generic [ref=e233]: 28M+ Tasks
+                - generic [ref=e234]:
+                  - generic [ref=e235]: Metric
+                  - generic [ref=e236]: 90% Less Onboarding Overhead
+          - generic [ref=e237]:
+            - text: Collapse
+            - img [ref=e238]
+        - generic [ref=e240] [cursor=pointer]:
+          - generic [ref=e241]: August 2021 — June 2023
+          - generic [ref=e243]:
+            - heading "Executive Steward, Product at Opolis" [level=3] [ref=e244]:
+              - text: Executive Steward, Product
+              - generic [ref=e245]: at Opolis
+            - paragraph [ref=e246]: Product leadership for a decentralized employment organization providing payroll, benefits, and compliance infrastructure for independent workers.
+            - generic [ref=e247]:
+              - generic [ref=e248]: DeFi
+              - generic [ref=e249]: Payroll
+              - generic [ref=e250]: Smart Contracts
+              - generic [ref=e251]: DAO
+            - generic [ref=e252]:
+              - list [ref=e253]:
+                - listitem [ref=e254]:
+                  - generic [ref=e255]: →
+                  - text: Led creation of a smart contract-based payroll funding system that reduced processing costs by 90% and has since facilitated $30M+ in crypto payroll transactions.
+                - listitem [ref=e256]:
+                  - generic [ref=e257]: →
+                  - text: Formed a strategic partnership and built a no-code legal entity creation flow, cutting onboarding drop-off by 3x and accelerating new member activation.
+                - listitem [ref=e258]:
+                  - generic [ref=e259]: →
+                  - text: Managed the development and launch of a governance token staking dashboard on an L2 network, supporting 1,000+ token stakers.
+                - listitem [ref=e260]:
+                  - generic [ref=e261]: →
+                  - text: Drove product discovery through qualitative user interviews, quantitative analysis, and competitive landscape research to identify high-impact opportunities.
+                - listitem [ref=e262]:
+                  - generic [ref=e263]: →
+                  - text: Partnered with engineering and marketing to align feature development with business and growth objectives.
+              - generic [ref=e264]:
+                - generic [ref=e265]:
+                  - generic [ref=e266]: Metric
+                  - generic [ref=e267]: $30M+ Processed
+                - generic [ref=e268]:
+                  - generic [ref=e269]: Metric
+                  - generic [ref=e270]: 90% Cost Reduction
+                - generic [ref=e271]:
+                  - generic [ref=e272]: Metric
+                  - generic [ref=e273]: 1K+ Stakers
+          - generic [ref=e274]:
+            - text: Expand
+            - img [ref=e275]
+        - generic [ref=e277] [cursor=pointer]:
+          - generic [ref=e278]: August 2020 — December 2022
+          - generic [ref=e280]:
+            - heading "Product & Tokenomics at DAOhaus" [level=3] [ref=e281]:
+              - text: Product & Tokenomics
+              - generic [ref=e282]: at DAOhaus
+            - paragraph [ref=e283]: Coordinated product strategy across a distributed community of developers, designers, and strategists to scope and build next-generation DAO creation and management platforms.
+            - generic [ref=e284]:
+              - generic [ref=e285]: DAO
+              - generic [ref=e286]: Tokenomics
+              - generic [ref=e287]: Smart Contracts
+              - generic [ref=e288]: Governance
+            - generic [ref=e289]:
+              - list [ref=e290]:
+                - listitem [ref=e291]:
+                  - generic [ref=e292]: →
+                  - text: Co-developed DAO creation smart contracts for the DAOhaus v2 app with over $400M in DAO activity.
+                - listitem [ref=e293]:
+                  - generic [ref=e294]: →
+                  - text: Created documentation, demos, and materials to drive adoption and community growth.
+                - listitem [ref=e295]:
+                  - generic [ref=e296]: →
+                  - text: Contributed to the innovative $HAUS token economic and governance design.
+              - generic [ref=e298]:
+                - generic [ref=e299]: Metric
+                - generic [ref=e300]: $400M+ DAO Activity
+          - generic [ref=e301]:
+            - text: Expand
+            - img [ref=e302]
+        - generic [ref=e304] [cursor=pointer]:
+          - generic [ref=e305]: November 2018 — August 2021
+          - generic [ref=e307]:
+            - heading "Founder & CEO at Peeps Democracy" [level=3] [ref=e308]:
+              - text: Founder & CEO
+              - generic [ref=e309]: at Peeps Democracy
+            - paragraph [ref=e310]: Founded and led a venture-backed startup building decentralized organization platforms, validating and rapidly iterating through three product versions in 20 months. Spun out of ConsenSys, acquired by Opolis.
+            - generic [ref=e311]:
+              - generic [ref=e312]: Ethereum
+              - generic [ref=e313]: DeFi
+              - generic [ref=e314]: Startup
+              - generic [ref=e315]: Fundraising
+            - generic [ref=e316]:
+              - list [ref=e317]:
+                - listitem [ref=e318]:
+                  - generic [ref=e319]: →
+                  - text: Created Pool-Party, the first DAO platform to integrate DAO smart contracts with a decentralized lending protocol on Ethereum, processing $150K+ across 6+ DAOs.
+                - listitem [ref=e320]:
+                  - generic [ref=e321]: →
+                  - text: Raised ~$500K in venture funding and successfully negotiated the company's acquisition by Opolis, delivering a 2x return to investors.
+              - generic [ref=e322]:
+                - generic [ref=e323]:
+                  - generic [ref=e324]: Metric
+                  - generic [ref=e325]: ~$500K Raised
+                - generic [ref=e326]:
+                  - generic [ref=e327]: Metric
+                  - generic [ref=e328]: 2x Return
+                - generic [ref=e329]:
+                  - generic [ref=e330]: Metric
+                  - generic [ref=e331]: Acquired by Opolis
+          - generic [ref=e332]:
+            - text: Expand
+            - img [ref=e333]
+        - generic [ref=e335] [cursor=pointer]:
+          - generic [ref=e336]: 2016 — 2018
+          - generic [ref=e338]:
+            - heading "Corporate Associate at WilmerHale" [level=3] [ref=e339]:
+              - text: Corporate Associate
+              - generic [ref=e340]: at WilmerHale
+            - paragraph [ref=e341]: Advised technology startups and growth-stage companies on venture financing, licensing agreements, corporate governance, and M&A transactions.
+            - generic [ref=e342]:
+              - generic [ref=e343]: Venture Finance
+              - generic [ref=e344]: M&A
+              - generic [ref=e345]: Corporate Law
+              - generic [ref=e346]: Startups
+            - list [ref=e348]:
+              - listitem [ref=e349]:
+                - generic [ref=e350]: →
+                - text: Developed deep expertise in startup operations, cap table management, and regulatory compliance that directly informs product strategy in regulated and emerging technology sectors.
+          - generic [ref=e351]:
+            - text: Expand
+            - img [ref=e352]
+    - generic [ref=e355]:
+      - generic [ref=e356]:
+        - generic [ref=e358]: 03 / Projects
+        - generic [ref=e360]:
+          - heading "Things I've vibe-coded into existence." [level=2] [ref=e361]
+          - paragraph [ref=e362]: Side projects where I get to play product, engineer, and user all at once.
+      - generic [ref=e363]:
+        - link "Live KidSpinner Making chores fun for families A gamified chore management app for families that turns household tasks into spinning-wheel adventures. Built to solve the age-old problem of getting kids to help around the house. React Native Gamification Family Tech" [ref=e364] [cursor=pointer]:
+          - /url: https://gachas.billsai.club/
+          - generic [ref=e367]: Live
+          - heading "KidSpinner" [level=3] [ref=e369]
+          - generic [ref=e370]: Making chores fun for families
+          - paragraph [ref=e371]: A gamified chore management app for families that turns household tasks into spinning-wheel adventures. Built to solve the age-old problem of getting kids to help around the house.
+          - generic [ref=e372]:
+            - generic [ref=e373]: React Native
+            - generic [ref=e374]: Gamification
+            - generic [ref=e375]: Family Tech
+        - link "Beta NewsBreef AI-curated news, briefed An AI-powered news aggregator that distills the day's top stories into personalized, bite-sized briefings. Cut through the noise and stay informed in minutes. AI/ML NLP News Tech" [ref=e376] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e379]: Beta
+          - heading "NewsBreef" [level=3] [ref=e381]
+          - generic [ref=e382]: AI-curated news, briefed
+          - paragraph [ref=e383]: An AI-powered news aggregator that distills the day's top stories into personalized, bite-sized briefings. Cut through the noise and stay informed in minutes.
+          - generic [ref=e384]:
+            - generic [ref=e385]: AI/ML
+            - generic [ref=e386]: NLP
+            - generic [ref=e387]: News Tech
+        - link "Live WordCraft Mobs Defend your world by sounding out words A voxel-style game where players fight off mobs by sounding out words and spelling them correctly. Built to help my kindergartener learn to read — because saving the world is way more fun than flashcards. EdTech Gaming Voxel Vibe Coded" [ref=e388] [cursor=pointer]:
+          - /url: https://wordcraft.billsai.club/
+          - generic [ref=e391]: Live
+          - heading "WordCraft Mobs" [level=3] [ref=e393]
+          - generic [ref=e394]: Defend your world by sounding out words
+          - paragraph [ref=e395]: A voxel-style game where players fight off mobs by sounding out words and spelling them correctly. Built to help my kindergartener learn to read — because saving the world is way more fun than flashcards.
+          - generic [ref=e396]:
+            - generic [ref=e397]: EdTech
+            - generic [ref=e398]: Gaming
+            - generic [ref=e399]: Voxel
+            - generic [ref=e400]: Vibe Coded
+    - generic [ref=e402]:
+      - generic [ref=e403]:
+        - generic [ref=e405]: 04 / Skills
+        - generic [ref=e407]:
+          - heading "The stack I bring to every product problem." [level=2] [ref=e408]
+          - paragraph [ref=e409]: Strategy, technical depth, and leadership fluency — because modern product work demands all three.
+      - generic [ref=e410]:
+        - generic [ref=e411]:
+          - generic [ref=e412]:
+            - img [ref=e414]
+            - generic [ref=e418]:
+              - generic [ref=e419]: Product Strategy
+              - generic [ref=e420]: 01 · 7 capabilities
+          - list [ref=e421]:
+            - listitem [ref=e422]:
+              - generic [ref=e423]: Product Vision & Roadmap
+              - generic [ref=e424]: →
+            - listitem [ref=e425]:
+              - generic [ref=e426]: 0-to-1 Product Building
+              - generic [ref=e427]: →
+            - listitem [ref=e428]:
+              - generic [ref=e429]: Data-Driven Decision Making
+              - generic [ref=e430]: →
+            - listitem [ref=e431]:
+              - generic [ref=e432]: User Research & Discovery
+              - generic [ref=e433]: →
+            - listitem [ref=e434]:
+              - generic [ref=e435]: Platform & Marketplace Strategy
+              - generic [ref=e436]: →
+            - listitem [ref=e437]:
+              - generic [ref=e438]: Gamification & Behavioral Design
+              - generic [ref=e439]: →
+            - listitem [ref=e440]:
+              - generic [ref=e441]: Stakeholder Management
+              - generic [ref=e442]: →
+        - generic [ref=e443]:
+          - generic [ref=e444]:
+            - img [ref=e446]
+            - generic [ref=e449]:
+              - generic [ref=e450]: Technical
+              - generic [ref=e451]: 02 · 7 capabilities
+          - list [ref=e452]:
+            - listitem [ref=e453]:
+              - generic [ref=e454]: AI/ML Product Development
+              - generic [ref=e455]: →
+            - listitem [ref=e456]:
+              - generic [ref=e457]: Smart Contracts & Web3
+              - generic [ref=e458]: →
+            - listitem [ref=e459]:
+              - generic [ref=e460]: Full-Stack Architecture
+              - generic [ref=e461]: →
+            - listitem [ref=e462]:
+              - generic [ref=e463]: API Design
+              - generic [ref=e464]: →
+            - listitem [ref=e465]:
+              - generic [ref=e466]: Tokenomics Design
+              - generic [ref=e467]: →
+            - listitem [ref=e468]:
+              - generic [ref=e469]: Vibe Prototyping
+              - generic [ref=e470]: →
+            - listitem [ref=e471]:
+              - generic [ref=e472]: Technical Specifications
+              - generic [ref=e473]: →
+        - generic [ref=e474]:
+          - generic [ref=e475]:
+            - img [ref=e477]
+            - generic [ref=e482]:
+              - generic [ref=e483]: Leadership
+              - generic [ref=e484]: 03 · 7 capabilities
+          - list [ref=e485]:
+            - listitem [ref=e486]:
+              - generic [ref=e487]: Cross-Functional Team Leadership
+              - generic [ref=e488]: →
+            - listitem [ref=e489]:
+              - generic [ref=e490]: Agile & Scrum
+              - generic [ref=e491]: →
+            - listitem [ref=e492]:
+              - generic [ref=e493]: Venture Fundraising
+              - generic [ref=e494]: →
+            - listitem [ref=e495]:
+              - generic [ref=e496]: Contract Negotiation
+              - generic [ref=e497]: →
+            - listitem [ref=e498]:
+              - generic [ref=e499]: Partnership Development
+              - generic [ref=e500]: →
+            - listitem [ref=e501]:
+              - generic [ref=e502]: Go-to-Market Strategy
+              - generic [ref=e503]: →
+            - listitem [ref=e504]:
+              - generic [ref=e505]: Board Governance
+              - generic [ref=e506]: →
+    - generic [ref=e508]:
+      - generic [ref=e509]:
+        - generic [ref=e511]: 05 / Credentials
+        - heading "Education & service." [level=2] [ref=e514]
+      - generic [ref=e515]:
+        - generic [ref=e516]:
+          - heading "Education" [level=3] [ref=e517]
+          - generic [ref=e518]:
+            - generic [ref=e519]: Duke University School of Law
+            - generic [ref=e520]: Juris Doctor, Magna Cum Laude
+            - generic [ref=e521]: "Co-Founder, Duke Law Tech Lab | Focus: Corporate & Startup Law"
+          - generic [ref=e522]:
+            - generic [ref=e523]: Davidson College
+            - generic [ref=e524]: Bachelor of Arts
+            - generic [ref=e525]: Honors Thesis in Religion & Literature
+        - generic [ref=e526]:
+          - heading "Board & Advisory" [level=3] [ref=e527]
+          - generic [ref=e528]:
+            - generic [ref=e529]: ETHDenver
+            - generic [ref=e530]: Board Member
+            - generic [ref=e531]: 2025 — Present
+            - generic [ref=e532]: Active board member on the cooperative that puts on the world's largest Web3 hackathon and innovation festival.
+          - generic [ref=e533]:
+            - generic [ref=e534]: Hillsborough Historic District
+            - generic [ref=e535]: Commissioner
+            - generic [ref=e536]: "2025"
+            - generic [ref=e537]: Historic preservation oversight for the Hillsborough Historic District.
+          - generic [ref=e538]:
+            - generic [ref=e539]: Duke Law Tech Labs
+            - generic [ref=e540]: Co-Founder
+            - generic [ref=e541]: 2016 — 2021
+            - generic [ref=e542]: Co-founded a pre-accelerator for legal tech founders, several of which went on to raise successful seed and Series A rounds or find exits.
+    - generic [ref=e543]:
+      - generic [ref=e544]:
+        - generic [ref=e545]: 06 / Contact
+        - heading "Let's build something worth shipping." [level=2] [ref=e546]:
+          - text: Let's build
+          - text: something worth shipping.
+        - paragraph [ref=e547]: Open to conversations about product leadership, advisory roles, and AI/platform strategy engagements.
+        - generic [ref=e548]:
+          - link "bill@billsai.club" [ref=e549] [cursor=pointer]:
+            - /url: mailto:bill@billsai.club
+            - text: bill@billsai.club
+            - img [ref=e550]
+          - link "Back to top ↑" [ref=e553] [cursor=pointer]:
+            - /url: "#hero"
+        - generic [ref=e554]:
+          - link "LinkedIn ↗" [ref=e555] [cursor=pointer]:
+            - /url: https://linkedin.com/in/billwarren
+          - link "GitHub ↗" [ref=e556] [cursor=pointer]:
+            - /url: https://github.com/wswarren12
+          - link "X / Twitter ↗" [ref=e557] [cursor=pointer]:
+            - /url: https://x.com/billwarren
+          - link "Warpcast ↗" [ref=e558] [cursor=pointer]:
+            - /url: https://warpcast.com/bill
+        - generic [ref=e559]:
+          - generic [ref=e560]: Or send a message directly
+          - textbox [ref=e561]
+          - generic [ref=e562]:
+            - generic [ref=e563]:
+              - generic [ref=e564]: Name
+              - textbox "Name" [ref=e565]:
+                - /placeholder: Your name
+            - generic [ref=e566]:
+              - generic [ref=e567]: Email
+              - textbox "Email" [ref=e568]:
+                - /placeholder: you@example.com
+          - generic [ref=e569]:
+            - generic [ref=e570]: Message
+            - textbox "Message" [ref=e571]:
+              - /placeholder: Tell me about your project or opportunity...
+          - button "Send Message →" [ref=e572]
+      - generic [ref=e574]:
+        - generic [ref=e575]: © 2026 Bill Warren · Hillsborough, NC · Built with intent
+        - generic [ref=e576]:
+          - link "Privacy Policy" [ref=e577] [cursor=pointer]:
+            - /url: /Privacy
+          - link "Terms of Service" [ref=e578] [cursor=pointer]:
+            - /url: /ToS
+  - generic [ref=e583] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=e584]:
+      - img [ref=e585]
+    - generic [ref=e588]:
+      - button "Open issues overlay" [ref=e589]:
+        - generic [ref=e590]:
+          - generic [ref=e591]: "0"
+          - generic [ref=e592]: "1"
+        - generic [ref=e593]: Issue
+      - button "Collapse issues badge" [ref=e594]:
+        - img [ref=e595]
+  - alert [ref=e597]

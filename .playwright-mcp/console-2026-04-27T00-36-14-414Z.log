@@ -1,0 +1,374 @@
+[     640ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[     695ms] [LOG] [HMR] connected @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[     749ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <LoadingBoundary name="/" loading={null}>
+      <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+                <SegmentViewNode type="page" pagePath="/Desktop/V...">
+                  <SegmentTrieNode>
+                  <Home>
+                    <Header>
+                    <SideNav>
+                    <Home>
+                      <main>
+                        <Hero>
+                        <Ticker>
+                        <About>
+                        <SignalStrip>
+                          <div className="relative o..." style={{...}}>
+                            <div className="mx-auto ma..." style={{...}}>
+                              <div>
+                              <div className="flex items...">
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div
+                                  className="flex-1 rounded-sm animate-sig"
+                                  style={{
++                                   background: "var(--indigo-deep)"
++                                   animationDelay: "0.2s"
++                                   height: "39.47650316931141%"
+-                                   height: "39.4765%"
++                                   opacity: 0.879541643231187
+-                                   opacity: "0.879542"
+-                                   background-image: ""
+-                                   background-position-x: ""
+-                                   background-position-y: ""
+-                                   background-size: ""
+-                                   background-repeat: ""
+-                                   background-attachment: ""
+-                                   background-origin: ""
+-                                   background-clip: ""
+-                                   background-color: ""
+-                                   animation-delay: "0.2s"
+                                  }}
+                                >
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div
+                                  className="flex-1 rounded-sm animate-sig"
+                                  style={{
++                                   background: "var(--indigo-deep)"
++                                   animationDelay: "1.44s"
++                                   height: "52.01624217576425%"
+-                                   height: "52.0162%"
++                                   opacity: 0.4747038259684972
+-                                   opacity: "0.474704"
+-                                   background-image: ""
+-                                   background-position-x: ""
+-                                   background-position-y: ""
+-                                   background-size: ""
+-                                   background-repeat: ""
+-                                   background-attachment: ""
+-                                   background-origin: ""
+-                                   background-clip: ""
+-                                   background-color: ""
+-                                   animation-delay: "1.44s"
+                                  }}
+                                >
+                                ...
+                        ...
+                ...
+              ...
+ @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:3127
+[    1618ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[    1627ms] [LOG] [Fast Refresh] done in 903ms @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[    1740ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[    1744ms] [LOG] [Fast Refresh] done in 105ms @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[   66512ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[   66937ms] [LOG] [Fast Refresh] done in 526ms @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[   67155ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[   67187ms] [LOG] [HMR] connected @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[   69231ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[   69257ms] [LOG] [HMR] connected @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[   69299ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <LoadingBoundary name="/" loading={null}>
+      <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+                <SegmentViewNode type="page" pagePath="/Desktop/V...">
+                  <SegmentTrieNode>
+                  <Home>
+                    <Header>
+                    <SideNav>
+                    <Home>
+                      <main>
+                        <Hero>
+                        <Ticker>
+                        <About>
+                        <SignalStrip>
+                          <div className="relative o..." style={{...}}>
+                            <div className="mx-auto ma..." style={{...}}>
+                              <div>
+                              <div className="flex items...">
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div
+                                  className="flex-1 rounded-sm animate-sig"
+                                  style={{
++                                   background: "var(--indigo-deep)"
++                                   animationDelay: "0.2s"
++                                   height: "39.47650316931141%"
+-                                   height: "39.4765%"
++                                   opacity: 0.879541643231187
+-                                   opacity: "0.879542"
+-                                   background-image: ""
+-                                   background-position-x: ""
+-                                   background-position-y: ""
+-                                   background-size: ""
+-                                   background-repeat: ""
+-                                   background-attachment: ""
+-                                   background-origin: ""
+-                                   background-clip: ""
+-                                   background-color: ""
+-                                   animation-delay: "0.2s"
+                                  }}
+                                >
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div
+                                  className="flex-1 rounded-sm animate-sig"
+                                  style={{
++                                   background: "var(--indigo-deep)"
++                                   animationDelay: "1.44s"
++                                   height: "52.01624217576425%"
+-                                   height: "52.0162%"
++                                   opacity: 0.4747038259684972
+-                                   opacity: "0.474704"
+-                                   background-image: ""
+-                                   background-position-x: ""
+-                                   background-position-y: ""
+-                                   background-size: ""
+-                                   background-repeat: ""
+-                                   background-attachment: ""
+-                                   background-origin: ""
+-                                   background-clip: ""
+-                                   background-color: ""
+-                                   animation-delay: "1.44s"
+                                  }}
+                                >
+                                ...
+                        ...
+                ...
+              ...
+ @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:3127
+[   71153ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[   71207ms] [LOG] [Fast Refresh] done in 154ms @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[   71316ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[   71334ms] [LOG] [HMR] connected @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[   75511ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[   75549ms] [LOG] [HMR] connected @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[   75581ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <LoadingBoundary name="/" loading={null}>
+      <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+                <SegmentViewNode type="page" pagePath="/Desktop/V...">
+                  <SegmentTrieNode>
+                  <Home>
+                    <Header>
+                    <SideNav>
+                    <Home>
+                      <main>
+                        <Hero>
+                        <Ticker>
+                        <About>
+                        <SignalStrip>
+                          <div className="relative o..." style={{...}}>
+                            <div className="mx-auto ma..." style={{...}}>
+                              <div>
+                              <div className="flex items...">
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div
+                                  className="flex-1 rounded-sm animate-sig"
+                                  style={{
++                                   background: "var(--indigo-deep)"
++                                   animationDelay: "0.2s"
++                                   height: "39.47650316931141%"
+-                                   height: "39.4765%"
++                                   opacity: 0.879541643231187
+-                                   opacity: "0.879542"
+-                                   background-image: ""
+-                                   background-position-x: ""
+-                                   background-position-y: ""
+-                                   background-size: ""
+-                                   background-repeat: ""
+-                                   background-attachment: ""
+-                                   background-origin: ""
+-                                   background-clip: ""
+-                                   background-color: ""
+-                                   animation-delay: "0.2s"
+                                  }}
+                                >
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div>
+                                <div
+                                  className="flex-1 rounded-sm animate-sig"
+                                  style={{
++                                   background: "var(--indigo-deep)"
++                                   animationDelay: "1.44s"
++                                   height: "52.01624217576425%"
+-                                   height: "52.0162%"
++                                   opacity: 0.4747038259684972
+-                                   opacity: "0.474704"
+-                                   background-image: ""
+-                                   background-position-x: ""
+-                                   background-position-y: ""
+-                                   background-size: ""
+-                                   background-repeat: ""
+-                                   background-attachment: ""
+-                                   background-origin: ""
+-                                   background-clip: ""
+-                                   background-color: ""
+-                                   animation-delay: "1.44s"
+                                  }}
+                                >
+                                ...
+                        ...
+                ...
+              ...
+ @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:3127
+[   97369ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[   98051ms] [LOG] [Fast Refresh] done in 783ms @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[  112804ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[  112867ms] [LOG] [Fast Refresh] done in 141ms @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[  126215ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[  126244ms] [LOG] [Fast Refresh] done in 50ms @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[  143754ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297
+[  143779ms] [LOG] [Fast Refresh] done in 56ms @ http://localhost:3002/_next/static/chunks/cb12e_next_dist_1bc6a77b._.js:2297

@@ -11,9 +11,23 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    company: "Protocol Labs",
+    role: "Product Lead, Alignment Asset",
+    period: "June 2026 — Present",
+    location: "Remote",
+    description:
+      "Leading product for the Alignment Asset — a novel financial asset backed by a diversified Trust spanning cash, crypto, and 190+ frontier-tech ventures, designed to incentivize collaboration across the Protocol Labs Network.",
+    achievements: [
+      "Own product strategy and roadmap for a first-of-its-kind asset that turns a diversified venture portfolio into a shared incentive for network-wide collaboration.",
+      "Translating trust structure, asset mechanics, and network incentives into a product that participants across 190+ ventures can understand and act on.",
+    ],
+    metrics: ["190+ Ventures", "Cash + Crypto + Venture Trust"],
+    tags: ["Fintech", "Tokenomics", "Web3", "0→1"],
+  },
+  {
     company: "Game7 / Summon",
     role: "Head of Product",
-    period: "July 2023 — Present",
+    period: "July 2023 — May 2026",
     location: "Remote",
     description:
       "Led product, engineering, and design teams for Summon, an AI-powered community engagement platform primarily serving gaming and decentralized finance ecosystems.",

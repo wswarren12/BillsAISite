@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Arrow } from "@/components/brick/Icon";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,24 +10,22 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
-      <Link
-        href="/"
-        className="mb-8 inline-block text-sm text-indigo-600 hover:underline"
-      >
-        &larr; Back to Home
+    <main id="main" className="legal-inner">
+      <Link href="/" className="btn mb-8">
+        <Arrow dir="left" /> Back to the build
       </Link>
+      <div className="box legal-page">
 
-      <h1 className="mb-2 text-3xl font-bold">Privacy Policy</h1>
-      <p className="mb-1 text-sm text-slate-500">
+      <h1>Privacy Policy</h1>
+      <p className="legal-meta">
         Bottle Rocket Labs II, LLC
       </p>
-      <p className="mb-1 text-sm text-slate-500">Effective Date: April 5, 2026</p>
-      <p className="mb-8 text-sm text-slate-500">
+      <p className="legal-meta">Effective Date: April 5, 2026</p>
+      <p className="legal-meta">
         Applicable to billsai.club and all subdomains
       </p>
 
-      <section className="space-y-6 text-slate-700 leading-relaxed [&_h2]:mt-8 [&_h2]:mb-3 [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-slate-900 [&_h3]:mt-4 [&_h3]:mb-2 [&_h3]:text-base [&_h3]:font-semibold [&_h3]:text-slate-800">
+      <section className="legal-body">
         <div>
           <h2>1. Introduction</h2>
           <p>
@@ -274,6 +273,7 @@ export default function PrivacyPolicy() {
           </p>
         </div>
       </section>
+      </div>
     </main>
   );
 }
