@@ -19,12 +19,19 @@ export default function Header() {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    // Lock background scroll while the menu is open so the page can't
+    // slide behind the panel on mobile.
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
   }, [open]);
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 p-3 md:p-4 pointer-events-none">
-      <div className="mx-auto max-w-[var(--page-max)] flex items-stretch gap-3 pointer-events-auto">
+      <div className="relative z-50 mx-auto max-w-[var(--page-max)] flex items-stretch gap-3 pointer-events-auto">
         {/* Brand block: a 2x2 red brick top-down */}
         <a
           href="#cover"
@@ -40,7 +47,7 @@ export default function Header() {
               <span
                 key={i}
                 className="block w-[9px] h-[9px] rounded-full"
-                style={{ background: "#ff6f6a", border: "1.5px solid var(--ink)" }}
+                style={{ background: "var(--brick-hi)", border: "1.5px solid var(--ink)" }}
               />
             ))}
           </span>
@@ -70,7 +77,12 @@ export default function Header() {
           })}
         </nav>
 
-        <div className="hidden md:block">
+        {/* One loud email ask per viewport: the Cover already carries the
+            primary button, so the header's only appears once Cover scrolls away. */}
+        <div
+          className="hidden md:block"
+          style={{ visibility: active === "cover" ? "hidden" : "visible" }}
+        >
           <a href="mailto:bill@billsai.club" className="btn btn-brick h-14 min-h-0">
             Email me
           </a>
@@ -91,7 +103,18 @@ export default function Header() {
       </div>
 
       {open && (
-        <div id="mobile-menu" className="md:hidden mx-auto max-w-[var(--page-max)] mt-3 box overflow-hidden pointer-events-auto">
+        <button
+          type="button"
+          aria-hidden="true"
+          tabIndex={-1}
+          onClick={() => setOpen(false)}
+          className="md:hidden fixed inset-0 z-40 pointer-events-auto"
+          style={{ background: "transparent", cursor: "default" }}
+        />
+      )}
+
+      {open && (
+        <div id="mobile-menu" className="relative z-50 md:hidden mx-auto max-w-[var(--page-max)] mt-3 box overflow-hidden pointer-events-auto">
           {TABS.map((t, i) => (
             <a
               key={t.id}

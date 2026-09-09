@@ -2,12 +2,12 @@ import { boardRoles, education } from "@/data/education";
 
 export default function Extras() {
   return (
-    <section id="extras" className="py-12 md:py-20">
+    <section id="extras" aria-labelledby="extras-title" className="py-12 md:py-20">
       <div className="mx-auto max-w-[var(--page-max)] px-4 md:px-6">
         <div className="box p-6 md:p-8 mb-6 grid gap-4 md:grid-cols-[auto_1fr] md:items-end">
-          <div className="numeral" style={{ fontSize: "clamp(40px, 5vw, 64px)" }}>
+          <h2 id="extras-title" className="numeral m-0" style={{ fontSize: "clamp(40px, 5vw, 64px)" }}>
             Also included
-          </div>
+          </h2>
           <p className="m-0 text-[16px] md:text-[18px] leading-[1.5] max-w-[52ch] md:justify-self-end md:text-right font-medium">
             Education and service — the pieces that don&apos;t go on the model
             but come in the box.

@@ -40,12 +40,12 @@ const STATUS: Record<string, { label: string; bg: string }> = {
 
 export default function Sets() {
   return (
-    <section id="sets" className="py-12 md:py-20">
+    <section id="sets" aria-labelledby="sets-title" className="py-12 md:py-20">
       <div className="mx-auto max-w-[var(--page-max)] px-4 md:px-6">
         <div className="box p-6 md:p-8 mb-6 grid gap-4 md:grid-cols-[auto_1fr] md:items-end">
-          <div className="numeral" style={{ fontSize: "clamp(40px, 5vw, 64px)" }}>
+          <h2 id="sets-title" className="numeral m-0" style={{ fontSize: "clamp(40px, 5vw, 64px)" }}>
             Sets
-          </div>
+          </h2>
           <p className="m-0 text-[16px] md:text-[18px] leading-[1.5] max-w-[52ch] md:justify-self-end md:text-right font-medium">
             Things I&apos;ve vibe-coded into existence — side projects where I
             get to play product, engineer, and user all at once.

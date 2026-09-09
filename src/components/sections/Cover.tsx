@@ -6,11 +6,12 @@ const firstYear = steps[0].period.match(/\d{4}/)?.[0] ?? "";
 
 export default function Cover() {
   return (
-    <section id="cover" className="pt-28 md:pt-36 pb-12 md:pb-20">
+    <section id="cover" aria-labelledby="cover-title" className="pt-28 md:pt-36 pb-12 md:pb-20">
       <div className="mx-auto max-w-[var(--page-max)] px-4 md:px-6 grid gap-6 lg:grid-cols-[1.05fr_1fr] lg:items-stretch">
         {/* Title block */}
         <div className="box p-6 md:p-10 flex flex-col">
           <h1
+            id="cover-title"
             className="numeral mt-2 md:mt-4"
             style={{ fontSize: "clamp(56px, 10.5vw, 164px)" }}
           >
@@ -89,7 +90,7 @@ export default function Cover() {
               className="w-full flex-1 min-h-[240px] max-h-[380px] my-4"
               title="The assembled career model: six bricks, one per role, stacked on a base plate."
             />
-            <ol className="flex flex-wrap gap-x-3 gap-y-1 text-[11px] font-bold m-0 p-0 list-none">
+            <ol className="flex flex-wrap gap-x-3 gap-y-1.5 text-[12px] font-bold m-0 p-0 list-none">
               {allPieces.slice(1).map((p, i) => (
                 <li key={p.id} className="inline-flex items-center gap-1.5">
                   <span

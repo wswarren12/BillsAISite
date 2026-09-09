@@ -21,18 +21,25 @@ export default function Contact() {
   const [errors, setErrors] = useState<FieldErrors>({});
   const [serverError, setServerError] = useState("");
 
-  function validate(): boolean {
+  function validate(): FieldErrors {
     const e: FieldErrors = {};
     if (formData.name.trim().length < 2) e.name = "Name needs at least 2 characters.";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) e.email = "That email doesn't look right — check the @ and domain.";
     if (formData.message.trim().length < 10) e.message = "Tell me a bit more — at least 10 characters.";
     setErrors(e);
-    return Object.keys(e).length === 0;
+    return e;
   }
 
   async function handleSubmit(ev: FormEvent) {
     ev.preventDefault();
-    if (!validate()) return;
+    const e = validate();
+    const firstInvalid = (["name", "email", "message"] as const).find((k) => e[k]);
+    if (firstInvalid) {
+      // Move focus to the first field that failed so keyboard and
+      // screen-reader users are taken straight to the problem.
+      document.getElementById(firstInvalid)?.focus();
+      return;
+    }
     setStatus("loading");
     setServerError("");
     try {
@@ -67,11 +74,11 @@ export default function Contact() {
   });
 
   return (
-    <section id="contact" className="py-12 md:py-20">
+    <section id="contact" aria-labelledby="contact-title" className="py-12 md:py-20">
       <div className="mx-auto max-w-[var(--page-max)] px-4 md:px-6 grid gap-6 lg:grid-cols-[1fr_1fr]">
         {/* Build complete */}
         <div className="box p-6 md:p-10 flex flex-col" style={{ background: "var(--yellow)" }}>
-          <h2 className="numeral mt-2" style={{ fontSize: "clamp(48px, 7vw, 104px)" }}>
+          <h2 id="contact-title" className="numeral mt-2" style={{ fontSize: "clamp(48px, 7vw, 104px)" }}>
             Build
             <br />
             complete.
@@ -105,18 +112,18 @@ export default function Contact() {
             <div>
               <label htmlFor="name" className="block text-[14px] font-bold mb-1.5">Name</label>
               <input type="text" autoComplete="name" placeholder="Your name" {...field("name")} />
-              {errors.name && <p id="name-error" className="mt-1.5 text-[13px] font-semibold" style={{ color: "var(--brick-deep)" }}>{errors.name}</p>}
+              {errors.name && <p id="name-error" role="alert" className="mt-1.5 text-[13px] font-semibold" style={{ color: "var(--brick-deep)" }}>{errors.name}</p>}
             </div>
             <div>
               <label htmlFor="email" className="block text-[14px] font-bold mb-1.5">Email</label>
               <input type="email" autoComplete="email" placeholder="you@example.com" {...field("email")} />
-              {errors.email && <p id="email-error" className="mt-1.5 text-[13px] font-semibold" style={{ color: "var(--brick-deep)" }}>{errors.email}</p>}
+              {errors.email && <p id="email-error" role="alert" className="mt-1.5 text-[13px] font-semibold" style={{ color: "var(--brick-deep)" }}>{errors.email}</p>}
             </div>
           </div>
           <div>
             <label htmlFor="message" className="block text-[14px] font-bold mb-1.5">Message</label>
             <textarea rows={6} placeholder="What are you building?" {...field("message")} style={{ ...field("message").style, resize: "vertical" }} />
-            {errors.message && <p id="message-error" className="mt-1.5 text-[13px] font-semibold" style={{ color: "var(--brick-deep)" }}>{errors.message}</p>}
+            {errors.message && <p id="message-error" role="alert" className="mt-1.5 text-[13px] font-semibold" style={{ color: "var(--brick-deep)" }}>{errors.message}</p>}
           </div>
 
           {serverError && (
@@ -138,7 +145,7 @@ export default function Contact() {
           <ul className="mt-2 flex flex-wrap gap-2 m-0 p-0 list-none">
             {SOCIAL.map((s) => (
               <li key={s.label}>
-                <a href={s.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 h-9 px-3 text-[13px] font-bold no-underline rounded-[4px]" style={{ border: "2px solid var(--ink)", color: "var(--ink)" }}>
+                <a href={s.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 h-11 px-3.5 text-[13px] font-bold no-underline rounded-[4px]" style={{ border: "2px solid var(--ink)", color: "var(--ink)" }}>
                   {s.label} <Arrow dir="upright" size={14} />
                 </a>
               </li>
@@ -150,9 +157,9 @@ export default function Contact() {
       <footer className="mx-auto max-w-[var(--page-max)] px-4 md:px-6 mt-6">
         <div className="box px-5 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[13px] font-semibold">
           <span>© 2026 Bill Warren · Hillsborough, NC · Side projects operate under Bottle Rocket Labs II, LLC</span>
-          <span className="flex gap-4">
-            <a href="/Privacy" className="no-underline hover:underline" style={{ color: "var(--ink)" }}>Privacy</a>
-            <a href="/ToS" className="no-underline hover:underline" style={{ color: "var(--ink)" }}>Terms</a>
+          <span className="flex gap-2 -my-2">
+            <a href="/Privacy" className="inline-flex items-center min-h-[44px] px-2 no-underline hover:underline" style={{ color: "var(--ink)" }}>Privacy</a>
+            <a href="/ToS" className="inline-flex items-center min-h-[44px] px-2 no-underline hover:underline" style={{ color: "var(--ink)" }}>Terms</a>
           </span>
         </div>
       </footer>

@@ -48,7 +48,7 @@ function Step({ i }: { i: number }) {
             <Callout piece={piece} s={12} className="w-[72px] h-[52px] md:w-[88px] md:h-[64px]" />
             <div className="leading-tight">
               <div className="numeral text-[22px]">1x</div>
-              <div className="text-[11px] font-bold uppercase tracking-[0.04em]">{piece.w}×{piece.d}</div>
+              <div className="text-[12px] font-bold uppercase tracking-[0.04em]">{piece.w}×{piece.d}</div>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ function Step({ i }: { i: number }) {
           {exp.period}
         </div>
         {isCurrent && (
-          <div className="absolute right-5 bottom-4 md:right-7 md:bottom-6 box px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.06em] inline-flex items-center gap-1.5" style={{ background: "var(--yellow)" }}>
+          <div className="absolute right-5 bottom-4 md:right-7 md:bottom-6 box px-2.5 py-1 text-[12px] font-extrabold uppercase tracking-[0.06em] inline-flex items-center gap-1.5" style={{ background: "var(--yellow)" }}>
             <span className="w-2 h-2 rounded-full" style={{ background: "var(--ink)" }} aria-hidden="true" />
             Current step
           </div>
@@ -105,7 +105,11 @@ function Step({ i }: { i: number }) {
           aria-controls={panelId}
           className="btn mt-6 self-start min-h-[48px] text-[14px]"
         >
-          {open ? "Hide sub-steps" : `Show ${exp.achievements.length} sub-steps`}
+          {(() => {
+            const n = exp.achievements.length;
+            const noun = `sub-step${n === 1 ? "" : "s"}`;
+            return open ? `Hide ${noun}` : `Show ${n} ${noun}`;
+          })()}
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" aria-hidden="true" style={{ transform: open ? "rotate(180deg)" : undefined, transition: "transform 200ms" }}>
             <path d="M6 9l6 6 6-6" />
           </svg>
@@ -150,12 +154,12 @@ function Step({ i }: { i: number }) {
 
 export default function Steps() {
   return (
-    <section id="steps" className="py-12 md:py-20">
+    <section id="steps" aria-labelledby="steps-title" className="py-12 md:py-20">
       <div className="mx-auto max-w-[var(--page-max)] px-4 md:px-6">
         <div className="box p-6 md:p-8 mb-6 grid gap-4 md:grid-cols-[auto_1fr] md:items-end">
-          <div className="numeral" style={{ fontSize: "clamp(40px, 5vw, 64px)" }}>
+          <h2 id="steps-title" className="numeral m-0" style={{ fontSize: "clamp(40px, 5vw, 64px)" }}>
             Steps 01–{stepNo(steps.length - 1)}
-          </div>
+          </h2>
           <p className="m-0 text-[16px] md:text-[18px] leading-[1.5] max-w-[52ch] md:justify-self-end md:text-right font-medium">
             Seven years of shipping at the edge of new platforms. Follow the
             steps in order — each one adds a piece.

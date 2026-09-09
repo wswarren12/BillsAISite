@@ -20,7 +20,9 @@
   --ink: #111111;
   --ink-2: #2a2f36;
   --brick: #e53935;
+  --brick-hi: #ff6f6a;     /* stud highlight on the brand brick (decorative) */
   --brick-deep: #c62828;   /* text-bearing red: white on this ≈ 6:1 */
+  --brick-pressed: #b3231f;/* hover fill of the primary button only */
   --yellow: #ffcd00;
   --yellow-deep: #d9a900;
   --blue: #147bd1;
@@ -99,7 +101,7 @@ body {
 .btn:hover { transform: translateY(2px); box-shadow: 0 2px 0 var(--ink); }
 .btn:active { transform: translateY(4px); box-shadow: 0 0 0 var(--ink); }
 .btn-brick { background: var(--brick-deep); color: var(--paper); }
-.btn-brick:hover { background: #b3231f; }
+.btn-brick:hover { background: var(--brick-pressed); }
 .btn-yellow { background: var(--yellow); }
 .btn-blue { background: var(--blue-deep); color: var(--paper); }
 .btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
