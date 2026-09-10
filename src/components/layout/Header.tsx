@@ -5,8 +5,8 @@ import { useScrollSpy } from "@/hooks/useScrollSpy";
 
 const TABS = [
   { id: "cover", label: "Cover", short: "00" },
-  { id: "steps", label: "Steps", short: "01–06" },
-  { id: "sets", label: "Sets", short: "" },
+  { id: "steps", label: "Experience", short: "01–06" },
+  { id: "sets", label: "Projects", short: "" },
   { id: "extras", label: "Extras", short: "" },
   { id: "contact", label: "Contact", short: "" },
 ];

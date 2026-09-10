@@ -9,8 +9,7 @@ export default function Extras() {
             Also included
           </h2>
           <p className="m-0 text-[16px] md:text-[18px] leading-[1.5] max-w-[52ch] md:justify-self-end md:text-right font-medium">
-            Education and service — the pieces that don&apos;t go on the model
-            but come in the box.
+            Education, plus the boards and advisory roles I serve.
           </p>
         </div>
 

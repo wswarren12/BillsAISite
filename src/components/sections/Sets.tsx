@@ -2,7 +2,7 @@ import { Model, type Piece } from "@/components/brick/Brick";
 import { projects } from "@/data/projects";
 import { Arrow } from "@/components/brick/Icon";
 
-/* Box art: a tiny model per set, drawn in bricks. */
+/* A tiny brick illustration per project, in the site's isometric style. */
 const ART: Record<string, Piece[]> = {
   KidSpinner: [
     { id: "p", w: 4, d: 4, h: 0.4, x: 0, z: 0, y: 0, color: "#d9d9d9" },
@@ -32,7 +32,7 @@ const ART: Record<string, Piece[]> = {
 };
 
 const STATUS: Record<string, { label: string; bg: string }> = {
-  Live: { label: "In stock", bg: "#2e9e5b" },
+  Live: { label: "Live", bg: "#2e9e5b" },
   Beta: { label: "Coming soon", bg: "#ffcd00" },
   "In Development": { label: "In development", bg: "#147bd1" },
   Experiment: { label: "Experiment", bg: "#d9d9d9" },
@@ -44,11 +44,11 @@ export default function Sets() {
       <div className="mx-auto max-w-[var(--page-max)] px-4 md:px-6">
         <div className="box p-6 md:p-8 mb-6 grid gap-4 md:grid-cols-[auto_1fr] md:items-end">
           <h2 id="sets-title" className="numeral m-0" style={{ fontSize: "clamp(40px, 5vw, 64px)" }}>
-            Sets
+            Projects
           </h2>
           <p className="m-0 text-[16px] md:text-[18px] leading-[1.5] max-w-[52ch] md:justify-self-end md:text-right font-medium">
-            Things I&apos;ve vibe-coded into existence — side projects where I
-            get to play product, engineer, and user all at once.
+            Side projects I&apos;ve designed and shipped solo — the live ones
+            are yours to try right now.
           </p>
         </div>
 
@@ -56,34 +56,28 @@ export default function Sets() {
           {projects.map((p) => {
             const hasUrl = Boolean(p.url && p.url !== "#");
             const st = STATUS[p.status] ?? STATUS["In Development"];
-            const Tag = hasUrl ? "a" : "div";
+            const isLive = p.status === "Live";
             return (
-              <Tag
+              <div
                 key={p.name}
-                href={hasUrl ? p.url : undefined}
-                target={hasUrl ? "_blank" : undefined}
-                rel={hasUrl ? "noopener noreferrer" : undefined}
-                className={`box flex flex-col overflow-hidden no-underline ${hasUrl ? "group" : ""}`}
+                className="box flex flex-col overflow-hidden"
                 style={{ color: "var(--ink)" }}
               >
-                {/* Box art */}
+                {/* Illustration */}
                 <div className="relative p-5" style={{ background: "var(--sky)", borderBottom: "2px solid var(--ink)" }}>
                   <div className="flex items-start justify-between">
-                    <span className="text-[12px] font-bold uppercase tracking-[0.06em]">Set</span>
-                    <span className="box px-2.5 py-1 text-[12px] font-extrabold uppercase tracking-[0.06em]" style={{ background: st.bg, color: "var(--ink)" }}>
+                    <span className="text-[12px] font-bold uppercase tracking-[0.06em]">Project</span>
+                    <span className="box px-2.5 py-1 text-[12px] font-extrabold uppercase tracking-[0.06em] inline-flex items-center gap-1.5" style={{ background: st.bg, color: "var(--ink)" }}>
+                      {isLive && <span className="w-2 h-2 rounded-full" style={{ background: "var(--ink)" }} aria-hidden="true" />}
                       {st.label}
                     </span>
                   </div>
                   <Model
                     pieces={ART[p.name] ?? ART.NewsBreef}
                     s={20}
-                    className="w-full h-[150px] mt-2 transition-transform duration-300 ease-out group-hover:-translate-y-1 motion-reduce:transition-none"
-                    title={`${p.name} box art`}
+                    className="w-full h-[150px] mt-2"
+                    title={`${p.name} artwork`}
                   />
-                  <div className="flex items-end justify-between text-[12px] font-bold">
-                    <span>{(ART[p.name] ?? ART.NewsBreef).length} pcs</span>
-                    {hasUrl && <span className="inline-flex items-center gap-1 group-hover:underline">Open set <Arrow dir="upright" size={14} /></span>}
-                  </div>
                 </div>
 
                 <div className="p-5 flex-1 flex flex-col">
@@ -97,8 +91,24 @@ export default function Sets() {
                       </li>
                     ))}
                   </ul>
+                  {hasUrl ? (
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-blue mt-5 self-start min-h-[48px] text-[14px]"
+                      aria-label={`View the live ${p.name} app (opens in a new tab)`}
+                    >
+                      View live app
+                      <Arrow dir="upright" size={16} />
+                    </a>
+                  ) : (
+                    <div className="mt-5 text-[13px] font-bold uppercase tracking-[0.06em]" style={{ color: "var(--ink-2)" }}>
+                      Coming soon
+                    </div>
+                  )}
                 </div>
-              </Tag>
+              </div>
             );
           })}
         </div>

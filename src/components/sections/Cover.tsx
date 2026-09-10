@@ -48,7 +48,7 @@ export default function Cover() {
 
           <div className="mt-8 pt-4 flex items-center justify-between gap-4 text-[12px] md:text-[13px] font-bold whitespace-nowrap" style={{ borderTop: "2px solid var(--ink)" }}>
             <span><span className="hidden sm:inline">Build instructions · </span>Set № 2026</span>
-            <span>{steps.length} steps · {firstYear}–present</span>
+            <span>{steps.length} roles · {firstYear}–present</span>
           </div>
         </div>
 
@@ -91,16 +91,23 @@ export default function Cover() {
               title="The assembled career model: six bricks, one per role, stacked on a base plate."
             />
             <ol className="flex flex-wrap gap-x-3 gap-y-1.5 text-[12px] font-bold m-0 p-0 list-none">
-              {allPieces.slice(1).map((p, i) => (
-                <li key={p.id} className="inline-flex items-center gap-1.5">
-                  <span
-                    className="inline-block w-3 h-3 rounded-[2px]"
-                    style={{ background: p.color, border: "1.5px solid var(--ink)" }}
-                    aria-hidden="true"
-                  />
-                  {String(i + 1).padStart(2, "0")} {steps[i].company}
-                </li>
-              ))}
+              {allPieces
+                .slice(1)
+                .slice()
+                .reverse()
+                .map((p, d, arr) => {
+                  const c = arr.length - 1 - d; // chronological index
+                  return (
+                    <li key={p.id} className="inline-flex items-center gap-1.5">
+                      <span
+                        className="inline-block w-3 h-3 rounded-[2px]"
+                        style={{ background: p.color, border: "1.5px solid var(--ink)" }}
+                        aria-hidden="true"
+                      />
+                      {String(d + 1).padStart(2, "0")} {steps[c].company}
+                    </li>
+                  );
+                })}
             </ol>
           </div>
 

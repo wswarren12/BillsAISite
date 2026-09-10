@@ -4,14 +4,19 @@ import { useEffect, useRef, useState } from "react";
 import { Callout, Model } from "@/components/brick/Brick";
 import { allPieces, pieces, stepNo, steps } from "@/data/build";
 
-function Step({ i }: { i: number }) {
-  const exp = steps[i];
-  const piece = pieces[i];
-  const [open, setOpen] = useState(i === steps.length - 1);
+function Role({ d }: { d: number }) {
+  // Cards read most-recent-first, but the physical model stays chronological,
+  // so map the display index d (0 = current role) to its chronological index c.
+  const c = steps.length - 1 - d;
+  const exp = steps[c];
+  const piece = pieces[c];
+  const [open, setOpen] = useState(d === 0);
   const isCurrent = exp.period.includes("Present");
-  const panelId = `step-${i + 1}-detail`;
-  const priorIds = pieces.slice(0, i).map((p) => p.id);
-  const laterIds = pieces.slice(i + 1).map((p) => p.id);
+  const label = stepNo(d);
+  const panelId = `role-${d + 1}-detail`;
+  const titleId = `role-${d + 1}-title`;
+  const priorIds = pieces.slice(0, c).map((p) => p.id);
+  const laterIds = pieces.slice(c + 1).map((p) => p.id);
   const ref = useRef<HTMLElement>(null);
   const [entered, setEntered] = useState(false);
   useEffect(() => {
@@ -33,15 +38,15 @@ function Step({ i }: { i: number }) {
   return (
     <article
       ref={ref}
-      id={`step-${stepNo(i)}`}
+      id={`role-${label}`}
       className="box relative grid gap-0 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] overflow-hidden"
-      aria-labelledby={`step-${i + 1}-title`}
+      aria-labelledby={titleId}
     >
       {/* Diagram */}
       <div className="relative p-5 md:p-7 min-h-[300px] lg:min-h-[420px]" style={{ background: "var(--sky)", borderBottom: "2px solid var(--ink)" }}>
         <div className="flex items-start justify-between gap-4">
           <div className="numeral" style={{ fontSize: "clamp(72px, 10vw, 140px)" }} aria-hidden="true">
-            {stepNo(i)}
+            {label}
           </div>
           {/* 1:1 call-out */}
           <div className="box p-2.5 md:p-3 flex items-center gap-3 flex-shrink-0">
@@ -62,7 +67,7 @@ function Step({ i }: { i: number }) {
             arrow
             entered={entered}
             className="w-full h-[240px] md:h-[320px]"
-            title={`Step ${stepNo(i)}: add the ${exp.company} piece to the model.`}
+            title={`${exp.role}, ${exp.company} (${exp.period})`}
           />
         </div>
         <div className="absolute left-5 bottom-4 md:left-7 md:bottom-6 text-[12px] font-bold uppercase tracking-[0.06em]">
@@ -71,14 +76,14 @@ function Step({ i }: { i: number }) {
         {isCurrent && (
           <div className="absolute right-5 bottom-4 md:right-7 md:bottom-6 box px-2.5 py-1 text-[12px] font-extrabold uppercase tracking-[0.06em] inline-flex items-center gap-1.5" style={{ background: "var(--yellow)" }}>
             <span className="w-2 h-2 rounded-full" style={{ background: "var(--ink)" }} aria-hidden="true" />
-            Current step
+            Current role
           </div>
         )}
       </div>
 
-      {/* Rules text */}
+      {/* Detail text */}
       <div className="p-5 md:p-7 flex flex-col">
-        <h3 id={`step-${i + 1}-title`} className="m-0 text-[26px] md:text-[32px] font-extrabold leading-[1.05] tracking-tight">
+        <h3 id={titleId} className="m-0 text-[26px] md:text-[32px] font-extrabold leading-[1.05] tracking-tight">
           {exp.role}
           <span className="block font-semibold text-[18px] md:text-[20px] mt-1" style={{ color: "var(--blue-deep)" }}>
             {exp.company}
@@ -107,7 +112,7 @@ function Step({ i }: { i: number }) {
         >
           {(() => {
             const n = exp.achievements.length;
-            const noun = `sub-step${n === 1 ? "" : "s"}`;
+            const noun = `highlight${n === 1 ? "" : "s"}`;
             return open ? `Hide ${noun}` : `Show ${n} ${noun}`;
           })()}
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" aria-hidden="true" style={{ transform: open ? "rotate(180deg)" : undefined, transition: "transform 200ms" }}>
@@ -118,7 +123,7 @@ function Step({ i }: { i: number }) {
         <div
           id={panelId}
           role="region"
-          aria-labelledby={`step-${i + 1}-title`}
+          aria-labelledby={titleId}
           aria-hidden={!open}
           className="grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none"
           style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
@@ -128,7 +133,7 @@ function Step({ i }: { i: number }) {
               {exp.achievements.map((a, j) => (
                 <li key={j} className="grid grid-cols-[44px_1fr] gap-3 items-start">
                   <span className="numeral text-[15px] pt-[3px]" aria-hidden="true">
-                    {stepNo(i)}.{j + 1}
+                    {label}.{j + 1}
                   </span>
                   <span className="text-[14px] leading-[1.6] max-w-[62ch]" style={{ color: "var(--ink-2)" }}>
                     {a}
@@ -158,16 +163,16 @@ export default function Steps() {
       <div className="mx-auto max-w-[var(--page-max)] px-4 md:px-6">
         <div className="box p-6 md:p-8 mb-6 grid gap-4 md:grid-cols-[auto_1fr] md:items-end">
           <h2 id="steps-title" className="numeral m-0" style={{ fontSize: "clamp(40px, 5vw, 64px)" }}>
-            Steps 01–{stepNo(steps.length - 1)}
+            Experience
           </h2>
           <p className="m-0 text-[16px] md:text-[18px] leading-[1.5] max-w-[52ch] md:justify-self-end md:text-right font-medium">
-            Seven years of shipping at the edge of new platforms. Follow the
-            steps in order — each one adds a piece.
+            Seven years shipping at the edge of new platforms — most recent
+            first.
           </p>
         </div>
         <div className="grid gap-6">
-          {steps.map((_, i) => (
-            <Step key={i} i={i} />
+          {steps.map((_, d) => (
+            <Role key={d} d={d} />
           ))}
         </div>
       </div>
