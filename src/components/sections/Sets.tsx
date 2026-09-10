@@ -34,7 +34,7 @@ const ART: Record<string, Piece[]> = {
 const STATUS: Record<string, { label: string; bg: string }> = {
   Live: { label: "Live", bg: "#2e9e5b" },
   Beta: { label: "Coming soon", bg: "#ffcd00" },
-  "In Development": { label: "In development", bg: "#147bd1" },
+  "In Development": { label: "In development", bg: "#8ecdf7" },
   Experiment: { label: "Experiment", bg: "#d9d9d9" },
 };
 

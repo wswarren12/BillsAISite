@@ -36,7 +36,7 @@ export const projects: Project[] = [
     description:
       "A voxel-style game where players fight off mobs by sounding out words and spelling them correctly. Built to help my kindergartener learn to read — because saving the world is way more fun than flashcards.",
     status: "Live",
-    tags: ["EdTech", "Gaming", "Voxel", "Vibe Coded"],
+    tags: ["EdTech", "Gaming", "Voxel", "Solo build"],
     url: "https://wordcraft.billsai.club/",
   },
 ];

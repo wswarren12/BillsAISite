@@ -15,8 +15,10 @@ function Role({ d }: { d: number }) {
   const label = stepNo(d);
   const panelId = `role-${d + 1}-detail`;
   const titleId = `role-${d + 1}-title`;
-  const priorIds = pieces.slice(0, c).map((p) => p.id);
-  const laterIds = pieces.slice(c + 1).map((p) => p.id);
+  // Every card shows the full model as a ghost outline with only this role's
+  // brick solid/highlighted — a stable "you are here" that reads cleanly in
+  // any order, so the model never appears to assemble or dis-assemble on scroll.
+  const ghostIds = pieces.filter((p) => p.id !== piece.id).map((p) => p.id);
   const ref = useRef<HTMLElement>(null);
   const [entered, setEntered] = useState(false);
   useEffect(() => {
@@ -61,8 +63,7 @@ function Role({ d }: { d: number }) {
           <Model
             pieces={allPieces}
             s={22}
-            ghostIds={priorIds}
-            hideIds={laterIds}
+            ghostIds={ghostIds}
             highlightId={piece.id}
             arrow
             entered={entered}
