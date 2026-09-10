@@ -26,7 +26,7 @@ export default function Cover() {
           >
             Product Lead at Protocol Labs, building the Alignment Asset. Seven
             years shipping 0→1 across{" "}
-            <strong className="font-extrabold">AI, web3, gaming, and fintech</strong>.
+            <strong className="font-extrabold">AI, web3, and fintech</strong>.
             I turn frontier tech into products people actually use.
           </p>
 

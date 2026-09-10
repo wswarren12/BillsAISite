@@ -85,7 +85,7 @@ export default function Contact() {
           </h2>
           <p className="mt-6 max-w-[38ch] text-[18px] md:text-[20px] leading-[1.4] font-medium" style={{ textWrap: "pretty" }}>
             Now let&apos;s build yours. Open to product leadership roles and
-            advisory engagements across AI, web3, gaming, and fintech.
+            advisory engagements across AI, web3, and fintech.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="mailto:bill@billsai.club" className="btn btn-brick">

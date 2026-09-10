@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://billsai.club"),
   title: "Bill Warren — Product Lead",
   description:
-    "Product Lead at Protocol Labs (Alignment Asset). Seven years shipping 0→1 products across AI, web3, gaming, and fintech. Former Head of Product at Game7/Summon and corporate attorney.",
+    "Product Lead at Protocol Labs (Alignment Asset). Seven years shipping 0→1 products across AI, web3, and fintech. Former Head of Product at Game7/Summon and corporate attorney.",
   openGraph: {
     title: "Bill Warren — Product Lead",
     description:
-      "I turn frontier tech — AI, web3, gaming, fintech — into products people actually use.",
+      "I turn frontier tech — AI, web3, fintech — into products people actually use.",
     type: "website",
     url: "https://billsai.club",
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bill Warren — Product Lead",
     description:
-      "I turn frontier tech — AI, web3, gaming, fintech — into products people actually use.",
+      "I turn frontier tech — AI, web3, fintech — into products people actually use.",
   },
 };
 
