@@ -50,5 +50,5 @@ export const inventory = [
   { qty: "500K+", label: "Platform users", color: "#ffffff" },
   { qty: "$30M+", label: "Payroll processed", color: "#2e9e5b" },
   { qty: "28M+", label: "Tasks completed", color: "#ffffff" },
-  { qty: "190+", label: "Ventures in the trust", color: "#e53935" },
+  { qty: "71%", label: "Increase in engagement", color: "#e53935" },
 ];
