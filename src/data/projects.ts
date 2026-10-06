@@ -25,9 +25,9 @@ export const projects: Project[] = [
     tagline: "AI-curated news, briefed",
     description:
       "An AI-powered news aggregator that distills the day's top stories into personalized, bite-sized briefings. Cut through the noise and stay informed in minutes.",
-    status: "Beta",
+    status: "Live",
     tags: ["AI/ML", "NLP", "News Tech"],
-    url: "#",
+    url: "https://newsbreef.billsai.club/",
   },
   {
     name: "WordCraft Mobs",
