@@ -18,7 +18,7 @@ export const experiences: Experience[] = [
     description:
       "Leading product for the Alignment Asset — a novel financial asset backed by a diversified Trust spanning cash, crypto, and 190+ frontier-tech ventures, designed to incentivize collaboration across the Protocol Labs Network.",
     achievements: [
-      "Drove a 71% increase in engagement in incentivized activities to benefit the Protocol Labs Network.",
+      "Driving consistent increases in engagement and completion of incentivized activities to benefit the Protocol Labs Network.",
       "Leading the work to professionalize the Alignment Asset — sharpening its structure, reporting, and mechanics toward an institutional-grade financial product.",
     ],
     metrics: ["+71% Engagement", "Cash + Crypto + Venture Trust"],
